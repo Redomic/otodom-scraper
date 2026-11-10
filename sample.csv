@@ -1,0 +1,138 @@
+id,url,title,priceAmount,priceCurrency,pricePerM2,areaM2,rooms,floor,buildYear,market,advertiserType,agencyName,city,district,street,region,lat,lng,imagesCount,propertyType,dealType,createdAt,modifiedAt,features,photos,description,ownership,constructionStatus,scrapedAt,heating,buildingType,buildingMaterial,windowsType
+66342188,https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-47m2-balkon-bezposrednio-ID4umDi,2-pokojowe mieszkanie 47m2 + balkon Bezpośrednio,846775,PLN,17830.6,47.49,2,1,2026,primary,agency,SKANSKA RESIDENTIAL DEVELOPMENT POLAND SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,Warszawa,Włochy,Fajansowa,mazowieckie,52.1964,20.95204,11,flat,sale,2025-01-14T09:36:07Z,2026-11-10T00:42:36Z,"[""garage"", ""balcony"", ""lift"", ""closed_area""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJ6eXN6OGR6cGU0NDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.nKQjEdzfw2JYo77VN_RmfeS_nf6d3onVHw1BZB-f1T4/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InI2ZWNnNHVoMmhxZjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YhFKKKw4-8QudxjuZ4yma-3AO6dDE_CtVcJdS-kdLZw/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9maDhvdHJ2ODk5YzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.IIES_CwPFcBRgekAtBMFZ29oE3qquS5GgXH7sZPeFy0/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNnbnNidjk2MjZsbjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.v_bU4mo894LF2jzmB0FaX6wh_6hNeOjK7ZYe4x3D1wI/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjA2NTBxcWVvZXl6dzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Gd5Fx2xDLLcPzfyE_KEwsmDZ-H04UZHSa5Xk7fPP410/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InV6dnNxeWwwbmlpYzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.tX1tDWmsgh5QbQQ1rtCPrhJ31RUuPPZcFselfNvXa2k/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZld2g4NjhxeDU1cy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UrH3w38K6aWgW49W4OjGpL-t3QBGZ-78cZE5-4pdN9M/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImI2Nm42Mml5OWFpZTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Unr9OGs-AuXUEuFyCi5CEASCSwHb6ZkqAsqnVIT0HwQ/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjI3amcyZmhmYWpmcDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.06QFNY2QdMhO6pcM3SPN78zYEA3SubBR6d8w4ZsdXbY/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImdpdGE1MzF1bjA4czMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.aaVSfN-Mjues3DcJ1pcW7w5o6i5rl51KkvixmlgHEt0/image;s=2048x1536;q=80""]","2-pokojowe mieszkanie numer BA0122 na 1. piętrze w Inwestycji Stilla Dewelopera Skanska
+Ponadstandardowa wysokość pomieszczeń
+Zielone patio z terenem rekreacyjnym
+Zadaszona wiata do rowerów, stojaki rowerowe w garażu
+Park Szczęśliwicki (22 minuty spacerem)
+Przystanek autobusowy (6 minut spacerem)
+Stacja SKM ""Warszawa Rakowiec"" (16 minut spacerem)
+Biedronka (7 minut spacerem), Lidl (11 minut spacerem)
+Centrum Łopuszańska 22 (10 minut spacerem)
+Stilla - poznaj inwestycję
+Inwestycja Stilla obejmuje dwa starannie zaprojektowane budynki – cztero- i ośmiopiętrowy. Wydzielono w nich łącznie 179 mieszkań o układach 1-, 2-, 3- i 4-pokojowych oraz powierzchniach od 26 do 76 mkw. Mieszkania wyróżniają się świetnym dostępem do światła dziennego oraz dodatkową przestrzenią w postaci parterowych ogródków oraz dużych balkonów i tarasów . Osiedle przystosowane jest do potrzeb osób z niepełnosprawnościami, seniorów i dzieci.
+Inwestycja Stilla sprzyja sąsiedzkiej integracji – zaplanowano tu wewnętrze patio . Dziedziniec otoczony jest z jednej strony starodrzewiem oraz został przemyślany w taki sposób, by jego wyposażenie było atrakcyjne zarówno dla dużych, jak i małych mieszkańców. Unikatowym rozwiązaniem jest szklarnia, w której każdy może uprawiać własne rośliny .
+Budynek został wyróżniony Certyfikatem Breeam , który zaświadcza o tym, że powstanie on w oparciu o zasady zróżnicowanego rozwoju. W inwestycji przewidziano liczne, ekologiczne rozwiązania , w tym:
+zielone dachy – dodatkowa powierzchnia retencjonująca wodę,
+windy z odzyskiem energii,
+czujnik jakości powietrza Airly,
+budowa zasilana energią z odnawialnych źródeł,
+domki dla ptaków i owadów,
+zdrowe materiały budowlane bez lotnych związków organicznych,
+elementy drewniane w budynku i na etapie budowy z certyfikatem FSC zaświadczającym o tym, że drewno jest legalnego pochodzenia,
+starannie zaplanowane tereny zielone z rodzimymi gatunkami roślin,
+stojaki rowerowe w garażu,
+zadaszona wiata dla rowerów.
+Stilla - lokalizacja
+Raków, ul. Fajansowa
+5,5 km do centrum
+6 min. spacerem do przystanku autobusowego
+11 min. spacerem do przystanku tramwajowego
+6 min. samochodem do stacji SKM
+dojazd do centrum: 18 min samochodem
+Istotne punkty w okolicy inwestycji Kawiarnia (169 m, 3 minuty spacerem)
+Restauracja (169 m, 3 minuty spacerem)
+Weterynarz (175 m, 3 minuty spacerem)
+Przedszkole (412 m, 6 minut spacerem)
+Przystanek autobusowy (450 m, 6 minut spacerem)
+Poczta (492 m, 6 minut spacerem)
+Piekarnia (492 m, 6 minut spacerem)
+Lekarz (495 m, 7 minut spacerem)
+Sklep: Biedronka (552 m, 7 minut spacerem)
+Apteka (627 m, 8 minut spacerem)
+Centrum Łopuszańska 22 (787 m, 10 minut spacerem)
+Przystanek tramwajowy (861 m, 11 minut spacerem)
+Sklep: Lidl (870 m, 11 minut spacerem)",full_ownership,to_completion,2026-11-10T04:35:09Z,,,,
+68617968,https://www.otodom.pl/pl/ad/mokotow-47-3-m-po-remoncie-wyposazenie-w-ce-ID4DUFq,"Mokotów | 47,3 M² | Po Remoncie | Wyposażenie W Ce",799000,PLN,16892.18,47.3,2,1,,,agency,Kusho Investment,Warszawa,Mokotów,Niewielka,mazowieckie,,,19,flat,sale,2026-11-10T00:15:02Z,2026-11-10T00:15:02Z,,,,,,2026-11-10T04:35:09Z,,,,
+66692752,https://www.otodom.pl/pl/oferta/1-pokojowe-mieszkanie-25m2-balkon-ID4wPPy,1-pokojowe mieszkanie 25m2 + balkon,574536,PLN,22200,25.88,1,4,2025,primary,agency,Białostocka Property,Warszawa,Praga-Północ,Białostocka,mazowieckie,52.256256,21.041685,19,flat,sale,2025-04-07T11:28:16Z,2026-11-09T22:54:51Z,"[""garage"", ""balcony"", ""lift""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im0zd3NoaHEyc3ZzZTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.pzrqscifZmJOXEVoFClXKKeyQrubtvDbWK0HDw6zyZc/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImhzeHlyZmRwNmphazMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.3Ce5UyW243YFlciX1EG_e395P5YH5Rz28PQOc2YHcow/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImsxcmU5bDl6c3llaC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.y8m_bXl_rOAwWI64DfN7LhHU09QrLH7d9Gcrtvo79x4/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZsMHlyN2E0ZnJoODItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YKc8yZfAtrg7hStEgQx_tZ4hYZSulLSRQCzMj6H5Y_k/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImxxMnFicnNrMW1qNjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YPyeVVlaT__Lh3dP-K_ITr7HsJZD0spnKmdB1CjSuCs/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InkwN3NpbXEwZDlwbDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.kkto_Nxe9wHUZVn1ZpWMzYItIsBGDm2lEOAQ4cUa5xs/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjM2aTd0Y3d6eHU3bS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.uj4N5wxQARyyRToEy4BJvgUx3NafotLbn96ISCLO6Qg/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inc0Nmw3ZGVmdWxtNzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Kjt6apg8ATxHhXJskdtgmcOYxDPltw04bs0vswL5xrU/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijh6ZHpuZ2tmNXlhbjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.u34WoxR3fxAxYv4yQv9rRJdZlyL_YbYUJUsQVALnPEs/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im84MjE4bWtuYjQ0YTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.v2S-QBShysteRsL3ipEIZ-kvV4CKOnCGJ9TUBXqFk-c/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imp1YTI2MmZmaWJwYjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.r2XxMRsM9nOIGxSjktik-eiNlTzhRNDGySya0GBOJBU/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InN3Z3lkanVicGo2azMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.n-gNEMk4ObzdF6thOmc4lEdeH_QvVz9ECJNeJlw_1bk/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRhdDFya2NnaDRrZzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UsKLhDFTDxo5v9jASLUA4ZFWUhb8nXGgV1QKMeTp_G8/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImE4ZXduMHgwdWI4bTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.02M_IQjDngr4tAlbboex7QyeUSsyTKYb8tdH5OQHXlk/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBueTE4NXAzeDQ0cjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.9auglvfrpeAGADZnfPHF0-Vgp30G_YTu90wjvOv19Mg/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjF1ZTFsaDJqNjZzdjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.4OcXo3j2rUs2XnDG2GjkPZX2SPB6Eeu6YrYjOMnRU3Y/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im80MDYydW9kMzE5MjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Bm1AYHim9HX_7Ako_dqZMZsTXGIerikZAyGDeC53E30/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjltMHp4dHU2djYzdjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.v_vLwEO-DDdLizkJPrmkn9FIS_WuJfBpvijXMUYOkF4/image;s=2048x1536;q=80""]","1-pokojowe mieszkanie numer M095 na 4. piętrze w Inwestycji Oh! Praga Dewelopera Białostocka Property
+Gotowa inwestycja – odbierz klucze już dziś
+Zielone patio, stanowiska do ładowania pojazdów elektrycznych
+Park Praski (13 minut pieszo)
+Przystanek autobusowy (4 minuty pieszo)
+Dworzec Warszawa Wileńska (5 minut pieszo)
+Stacja metra Dworzec Wileński (8 minut pieszo)
+CH Galeria Wileńska (5 minut pieszo)
+Oh! Praga - poznaj inwestycję
+Oh! Praga – Inwestycja łącząca jakość, design i ekologię
+Oh! Praga to GOTOWY projekt mieszkaniowy , zlokalizowany w dynamicznie rozwijającej się części warszawskiej Pragi, tuż obok Centrum Praskiego Koneser – miejsca z bogatą ofertą kulturalną i rozrywkową. Inwestycja oferuje gotowe mieszkania na sprzedaż, łącząc wysoką jakość, estetykę i troskę o środowisko.
+kameralna inwestycja – 185 mieszkań,
+mieszkania od 1 do 4 pokoi,
+w parterze lokale usługowe,
+balkony i duże tarasy,
+funkcjonalne metraże od 24,9 do 78,1 mkw.,
+możliwość łączenia mieszkań,
+zakup bez podatku PCC,
+gotowa inwestycja - odbierz klucze już dziś.
+Inwestycja wyróżnia się świetną lokalizacją – zaledwie kilkanaście minut komunikacją do centrum miasta . W pobliżu znajdują się przystanki komunikacji miejskiej, Stacja Metra Dworzec Wileński, Dworzec Warszawa Wileńska oraz liczne usługi i sklepy, a także placówki edukacyjne.
+Budynek, zaprojektowany przez pracownię Foroom, wpisuje się w charakter warszawskiej Pragi. Jego elegancka biała elewacja nawiązuje do historycznej zabudowy, a industrialny charakter uzupełnia ceglana fasada . Całość ożywiają okna i balkony rozmieszczone w rytmie szachownicy, nadając fasadzie dynamiczny, a jednocześnie harmonijny wygląd.
+Inwestycja posiada prestiżowy certyfikat BREEAM na poziomie Very Good , który potwierdza zastosowanie energooszczędnych i proekologicznych rozwiązań zgodnych z zasadami zrównoważonego rozwoju. Do dyspozycji mieszkańców są m.in.:
+8 stanowisk do ładowania pojazdów elektrycznych,
+rozbudowana infrastruktura rowerowa,
+zielone patio sprzyjające relaksowi,
+energooszczędne oświetlenie LED obniżające koszty eksploatacyjne.
+Zgodnie z założeniami Polskiego Związku Firm Deweloperskich (PZFD), Oh! Praga spełnia najwyższe standardy realizacji oraz gwarantuje pełną transparentność procesu sprzedaży .
+Oh! Praga to doskonała opcja dla osób, które cenią nowoczesność, ekologię i komfort życia w historycznej, a zarazem dynamicznie rozwijającej się części Warszawy.
+Oh! Praga - lokalizacja
+Warszawa, ul. Białostocka
+3,6 km do centrum
+4 min. spacerem do przystanku autobusowego
+5 min. spacerem do stacji kolejowej
+8 min. spacerem do przystanku tramwajowego
+dojazd do centrum: 17 min samochodem
+Istotne punkty w okolicy inwestycji Przystanek autobusowy (290 m, 4 minuty spacerem)
+Stacja kolejowa (368 m, 5 minut spacerem)
+Przystanek tramwajowy (538 m, 8 minut spacerem)
+Przystanek metra (735 m, 11 minut spacerem)
+Przystanek planowanego metra (996 m, 14 minut spacerem)",full_ownership,to_completion,2026-11-10T04:35:09Z,,,,
+67710541,https://www.otodom.pl/pl/oferta/1-pokojowe-mieszkanie-36m2-bezposrednio-ID4A6Bw,1-pokojowe mieszkanie 36m2 Bezpośrednio,827606,PLN,22900,36.14,1,1,2028,primary,agency,Moderna Holding sp. z o.o.,Warszawa,Praga-Południe,Jana Zamoyskiego,mazowieckie,52.247234,21.051498,10,flat,sale,2026-02-13T13:48:47Z,2026-11-09T22:54:35Z,"[""garage"", ""usable_room"", ""lift"", ""entryphone"", ""monitoring"", ""alarm""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImpkOHJmeGM2Nm8wcTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ZwMzYJimIvpI5M5GN2Vhc8Lm4tQEPLK50qnURnVd3vI/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InEyMXNha3B5ZGw2cy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.IdvirbEBvDFRGqPDaQl-zInKTD5ODm14kVHDUIURGtw/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjYzMXV1Mzk2eHE0OTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-JIsAz6pGO0WgeTgFoCzgYNwq5UJ2IUAwfLYz29F8Is/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InVmbWhpN2F2d2o4NDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.BxFfDKYg6hC5-aN66-oCEl12ikXej_prATPh07KNj64/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJkOW9tNHI3NW9vYS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UKmqW1_8TkcBseGwW9rl78OpRkYEZFeliA3vI5CtbqI/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InFmMDFobmZsenA5bTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.6qUjXSiwVs4892eHs_4PCYr7nteKDiupeFPghRD9qVY/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJnM3kwM21hdHJvajMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ILM8tx9XZ11uKLcyNt7K_PzkjdcjC2E-SZhXtoy4Vh0/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im5qc2gwamc0aXBnMjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.hJx_3p_kdKe9qaaRhX6zWq0_lYgjew5Y4lApqEJI26k/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZpZ2Z0dm1qZGZ4cDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.FDH3Lu3WzDtg8ZAO0zBq0MlT1kyQFZL0uxblYMu8VCo/image;s=2048x1536;q=80""]","1-pokojowe mieszkanie numer C.01.02 na 1. piętrze w budynku C w Inwestycji Kanwa Apartamenty Dewelopera Moderna Holding sp. z o.o.
+Inwestycja nad Jeziorem Kamionkowskim
+W bezpośrednim sąsiedztwie Parku Skaryszewskiego
+Przystanki tramwajowe i autobusowe (1 minuta spacerem)
+Stacja metra (6 minut spacerem)
+Stadion Narodowy (10 minut spacerem)
+Galeria Wileńska (6 minut samochodem)
+Kanwa Apartamenty - poznaj inwestycję
+Miasto nie powstaje od zera. Jest zapisem – nawarstwieniem decyzji, linii, proporcji. Z czasem każda z nich staje się częścią większego porządku, który łączy to, co było, z tym, co dopiero się wydarzy. KANWA odkrywa tę strukturę na nowo. To projekt, który nie konstruuje rzeczywistości od podstaw, lecz wprowadza nowy porządek w istniejącą tkankę miasta.
+Apartamentowiec przy ulicy Zamoyskiego 24/26 jest próbą architektonicznej rewitalizacji – gestem przywracającym logikę miejsca. Między Teatrem Powszechnym a fabryką czekolady Wedla, między historią a współczesnością, powstaje przestrzeń, która nie dominuje, lecz porządkuje.
+Budynek KANWA to nie monotonna bryła. To kompozycja różnych wysokości, podcięć, przeszkleń – wielowątkowa narracja zapisana w architekturze
+Od strony ulicy Zamoyskiego – 7 kondygnacji nadziemnych, które łączą się z historyczną pierzeją i tworzą spójną zabudowę kwartału. W najwyższym punkcie budynek dorasta do 8 kondygnacji, tworząc wyrazistą dominantę. Od strony południowej, tam gdzie sąsiaduje z jeziorem, schodzi łagodnie do 5 kondygnacji, jakby kłaniał się naturze. To nie jest przypadkowe. Architekci projektowali budynek tak, aby szanował kontekst – historyczny, urbanistyczny, przyrodniczy. KANWA wpisuje się w krajobraz Pragi naturalnie, ale jednocześnie wnosi coś świeżego, współczesnego.
+Inspiracja miejscem
+KANWA zajmuje wyjątkowe miejsce na mapie Warszawy. Dosłownie i w przenośni. Z jednej strony – Jezioro Kamionkowskie i rozległy Park Skaryszewski, 58 hektarów zielonej enklawy w sercu miasta. Miejsce, gdzie Warszawa oddycha. Gdzie o poranku biegają mieszkańcy, a wieczorem spacerują pary. Gdzie w weekendy rodziny urządzają pikniki, a latem odbywają się koncerty pod gwiazdami. Z drugiej strony – Teatr Powszechny im. Zygmunta Hubnera, jedna z najważniejszych scen współczesnej Warszawy. Miejsce, gdzie rodzi się kultura, toczone są ważne dyskusje, prezentowane są spektakle, które poruszają i inspirują. To wszystko przy doskonałym skomunikowaniu ze Śródmieściem dzięki stacji metra „Stadion Narodowy” oddalonej o zaledwie 400 m.
+Między KANWĄ a Teatrem Powszechnym powstanie nowa przestrzeń publiczna – Aleja Teatralna. Jej przebieg wyznacza naturalną oś widokową, która łączy ulicę Zamoyskiego z Parkiem Skaryszewskim i jeziorem Kamionkowskim. To więcej niż miejski trakt spacerowy – to gest urbanistyczny, który porządkuje fragment dzielnicy i przywraca mu pierwotną logikę przestrzeni.
+Naturalne materiały – drewno, beton, kamień. Przemyślane oświetlenie, które tworzy atmosferę. Stonowane kolory, geometryczne wzory, czyste linie.
+Klatki schodowe zaprojektowane są z dbałością o detale. Wysokie przestrzenie, naturalne światło, eleganckie wykończenia. Każdy element przemyślany. Każdy detal na swoim miejscu. To pierwsze wrażenie, które zostaje. I to wrażenie, które potwierdza się każdego dnia, kiedy wracasz do domu.
+Apartamenty Kanwy mają charakter spokojnej, uporządkowanej ramy, w której łatwo ułożyć własny styl – od bardziej minimalistycznego po wyraźnie domowy
+Duże przeszklenia otwierają wnętrza na zieleń i wodę, a neutralna paleta materiałów daje swobodę budowania atmosfery bez ograniczeń. W takiej bazie łatwo zacząć poszukiwanie własnego języka – poprzez dobór mebli, światła, sztuki czy detali, które stają się wyrazem temperamentu. Każdy układ pozwala na indywidualne interpretacje: stworzenie miejsca pracy, własnej strefy odpoczynku, przestrzeni do kolekcjonowania przedmiotów albo wyciszonych rytuałów. Kanwa staje się tłem, na którym możesz projektować codzienność tak, by była autentyczna i naprawdę Twoja.
+Kanwa Apartamenty - lokalizacja
+00-001 Warszawa, ul. Zamoyskiego 24
+3,3 km do centrum
+2 min. spacerem do przystanku tramwajowego
+2 min. spacerem do przystanku autobusowego
+8 min. spacerem do stacji kolejowej
+dojazd do centrum: 15 min samochodem
+Istotne punkty w okolicy inwestycji Przystanek tramwajowy (85 m, 2 minuty spacerem)
+Przystanek autobusowy (101 m, 2 minuty spacerem)
+Stacja kolejowa (538 m, 8 minut spacerem)
+Stacja SKM (538 m, 8 minut spacerem)
+Przystanek metra (689 m, 10 minut spacerem)
+Przystanek planowanego metra (772 m, 11 minut spacerem)",full_ownership,to_completion,2026-11-10T04:35:09Z,urban,apartment,,
+67476035,https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-41m2-ogrodek-bez-prowizji-ID4z7B9,2-pokojowe mieszkanie 41m2 + ogródek Bez Prowizji,748629,PLN,17850,41.94,2,0,2028,primary,agency,VINCI Immobilier Polska,Warszawa,Bemowo,Meriana C. Coopera,mazowieckie,52.23575,20.89245,5,flat,sale,2025-11-24T13:13:57Z,2026-11-09T22:54:34Z,"[""terrace"", ""garden"", ""garage"", ""lift"", ""entryphone"", ""monitoring""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imp1dG03MWU4ZWlheDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.n69OvohhgqQwqjSTVDXYVQ-02QTsLkBnb2pq01doJoQ/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJ5amZ6MzB2NmV2aDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.SRtxl6HCq12oqR-W4PfAJuAh795BHUnaowv11Qjp_-0/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjRuNTBwOG51OWZ0ODEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.cy5DDJG1x3ZVpCM8z0oQ1uK9Dt199Q56Y6uFHWXjp4g/image;s=2048x1536;q=80"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InFybHQ0OXZjYXZtaTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.uvKuEWOIPGgn9O8nLrta4eYJ60JuhIjeA8pWYxsvKIo/image;s=2048x1536;q=80""]","2-pokojowe mieszkanie numer C.3 na parterze w budynku C w Inwestycji Premiera Bemowo Dewelopera VINCI Immobilier Polska
+Park Górczewska (15 minut spacerem)
+Przystanek autobusowy (4 minuty spacerem)
+Pętla tramwajowa (10 minut spacerem)
+Biedronka (8 minut spacerem), Kaufland (10 minut spacerem)
+CH Wola Park (10 minut samochodem)
+Premiera Bemowo - poznaj inwestycję
+Stwórz własną historię
+Premiera Bemowo to miejsce stworzone z myślą o mieszkańcach, łączące komfort z nowoczesną architekturą. Położone tuż przy budowanej stacji metra zapewnia wszystko, co potrzebne, aby żyć wygodnie, spokojnie, a jednocześnie blisko miejskich udogodnień.
+Niezwykły patron
+Premiera Bemowo to również niezwykła historia patrona ulicy, Merian C. Coopera amerykańskiego filmowca, reżysera i scenarzysty, a także generała armii USA oraz podpułkownika w Wojsku Polskim. Jego najpopularniejszym filmem stał się King Kong z 1933 roku. Szanujemy to dziedzictwo, dlatego filmowe odniesienia znajdziecie również w budynkach Premiery Bemowo.
+Premiera Bemowo - lokalizacja
+Bemowo, ul. Meriana C. Coopera
+8,2 km do centrum
+6 min. spacerem do przystanku autobusowego
+9 min. spacerem do planowanego metra
+13 min. spacerem do przystanku tramwajowego
+dojazd do centrum: 15 min samochodem
+Istotne punkty w okolicy inwestycji Przystanek autobusowy (394 m, 6 minut spacerem)
+Przystanek planowanego metra (637 m, 9 minut spacerem)
+Przystanek tramwajowy (885 m, 13 minut spacerem)",full_ownership,to_completion,2026-11-10T04:35:09Z,urban,block,reinforced_concrete,plastic
