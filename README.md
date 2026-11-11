@@ -21,31 +21,31 @@ Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](samp
 
 ```json
 {
-  "id": 67772110,
-  "url": "https://www.otodom.pl/pl/ad/legnicka-ursus-mieszkanie-2-pok-c-m67-ID4AmCy",
-  "title": "Legnicka Ursus | mieszkanie 2-pok. | C_M67",
-  "priceAmount": 756054,
+  "id": 68615321,
+  "url": "https://www.otodom.pl/pl/ad/super-uklad-swietna-lokalizacja-blisko-tramwaju-bielany-zoliborz-ID4DTYJ",
+  "title": "Super układ, świetna lokalizacja blisko tramwaju, Bielany/Żoliborz!",
+  "priceAmount": 765719,
   "priceCurrency": "PLN",
-  "pricePerM2": 16200,
-  "areaM2": 46.67,
+  "pricePerM2": 19100,
+  "areaM2": 40.09,
   "rooms": 2,
-  "floor": 2,
+  "floor": 1,
   "buildYear": null,
   "market": null,
   "advertiserType": "agency",
-  "agencyName": "Petro Development Sp. z o. o.",
+  "agencyName": "Biuro Sprzedaży Deweloperskiej",
   "city": "Warszawa",
-  "district": "Ursus",
-  "street": "Legnicka",
+  "district": "Żoliborz",
+  "street": "Literacka",
   "region": "mazowieckie",
   "lat": null,
   "lng": null,
-  "imagesCount": 23,
+  "imagesCount": 4,
   "propertyType": "flat",
   "dealType": "sale",
-  "createdAt": "2026-03-04T13:47:15Z",
-  "modifiedAt": "2026-11-10T21:09:08Z",
-  "scrapedAt": "2026-11-10T21:20:38Z"
+  "createdAt": "2026-11-09T11:43:04Z",
+  "modifiedAt": "2026-11-11T19:06:55Z",
+  "scrapedAt": "2026-11-11T19:09:05Z"
 }
 ```
 
