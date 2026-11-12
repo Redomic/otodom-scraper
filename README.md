@@ -8,6 +8,7 @@ Extract property listings from any Otodom.pl search: price, area, rooms, locatio
 ## What you get
 - Listings from Otodom.pl search results (sale or rent) for flats, houses, rooms, plots, commercial and more.
 - Normalized, flat rows: IDs, URLs, title, price in PLN, price per m², area, rooms, floor, property/deal type, advertiser type and agency, city/district/street/region, image count, created/modified dates.
+- **Sort results**: control the order with `sortBy` (`default`, `newest`, `oldest`, `price_asc`, `price_desc`, `area_asc`, `area_desc`). With a low `maxItems`, sorting decides which listings you get.
 - **Priced rows only by default**: listings without a published price are dropped from the output. Set `includeNoPrice: true` to also return them with `priceAmount`/`priceCurrency` null.
 - **Optional full ad details** (`fetchDetails`): set `fetchDetails: true` to open each listing's offer page and merge GPS (`lat`/`lng`), `buildYear`, `monthlyCharges` (czynsz), `heating`, `buildingType`, `buildingMaterial`, `windowsType`, `ownership`, `constructionStatus`, `market`, `features`, the full `photos` gallery and the `description` into the row. Default `false` for fast search-card-only runs with lower proxy cost.
 - **Radius search**: set centre `lat`/`lng` plus `radiusKm` (e.g. Warsaw centre with `radiusKm: 2`) to keep only rows within that distance. Every returned row includes `distanceKm`; rows without GPS are excluded.
