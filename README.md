@@ -7,10 +7,11 @@ Extract property listings from any Otodom.pl search: price, area, rooms, locatio
 
 ## What you get
 - Listings from Otodom.pl search results (sale or rent) for flats, houses, rooms, plots, commercial and more.
-- Normalized, flat rows: IDs, URLs, title, price in PLN, price per m², area, rooms, floor, property/deal type, advertiser type and agency, city/district/street/region, image count, created/modified dates.
+- Normalized, flat rows: IDs, URLs, title, price in PLN, price per m², area, rooms, floor, total floors in the building, property/deal type, advertiser type and agency, city/district/street/region, image count, created/modified dates.
 - **Sort results**: control the order with `sortBy` (`default`, `newest`, `oldest`, `price_asc`, `price_desc`, `area_asc`, `area_desc`). With a low `maxItems`, sorting decides which listings you get.
 - **Priced rows only by default**: listings without a published price are dropped from the output. Set `includeNoPrice: true` to also return them with `priceAmount`/`priceCurrency` null.
-- **Optional full ad details** (`fetchDetails`): set `fetchDetails: true` to open each listing's offer page and merge GPS (`lat`/`lng`), `buildYear`, `monthlyCharges` (czynsz), `heating`, `buildingType`, `buildingMaterial`, `windowsType`, `ownership`, `constructionStatus`, `market`, `features`, the full `photos` gallery and the `description` into the row. Default `false` for fast search-card-only runs with lower proxy cost.
+- **Price per m² filters**: set `pricePerM2Min`/`pricePerM2Max` to target deals by unit price; rows outside the range are excluded (falls back to `priceAmount/areaM2` when `pricePerM2` is missing).
+- **Optional full ad details** (`fetchDetails`): set `fetchDetails: true` to open each listing's offer page and merge GPS (`lat`/`lng`), `buildYear`, `totalFloors`, `monthlyCharges` (czynsz), `heating`, `buildingType`, `buildingMaterial`, `windowsType`, `ownership`, `constructionStatus`, `market`, `features`, the full `photos` gallery and the `description` into the row. Default `false` for fast search-card-only runs with lower proxy cost.
 - **Radius search**: set centre `lat`/`lng` plus `radiusKm` (e.g. Warsaw centre with `radiusKm: 2`) to keep only rows within that distance. Every returned row includes `distanceKm`; rows without GPS are excluded.
 - **Monitor mode**: run on a schedule to get only `new`, `changed` (e.g. price change) and `removed` listings since the previous run. `changed` rows include current price fields plus `previousPriceAmount`, `previousPriceCurrency`, and `previousPricePerM2` (when present in state). Each monitor row also carries `priceHistory` (append-only observations stored from this monitor, last 20), `priceChangePct` and `priceDirection` (`up`/`down`/`flat`/`new`) computed from stored snapshots without extra requests. State is kept per source URL in a named key-value store. Use `droppedOnly` to emit only rows whose price dropped while still tracking all changes in state and summary counts.
 - Per-source status rows and a run summary. Empty or failed sources are reported, never silently skipped.
@@ -22,31 +23,32 @@ Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](samp
 
 ```json
 {
-  "id": 68615321,
-  "url": "https://www.otodom.pl/pl/ad/super-uklad-swietna-lokalizacja-blisko-tramwaju-bielany-zoliborz-ID4DTYJ",
-  "title": "Super układ, świetna lokalizacja blisko tramwaju, Bielany/Żoliborz!",
-  "priceAmount": 765719,
+  "id": 68057065,
+  "url": "https://www.otodom.pl/pl/ad/1-pokojowe-mieszkanie-37m2-balkon-bezposrednio-ID4ByKB",
+  "title": "1-pokojowe mieszkanie 37m2 + balkon Bezpośrednio",
+  "priceAmount": 791883,
   "priceCurrency": "PLN",
-  "pricePerM2": 19100,
-  "areaM2": 40.09,
-  "rooms": 2,
+  "pricePerM2": 21066.32,
+  "areaM2": 37.59,
+  "rooms": 1,
   "floor": 1,
+  "totalFloors": null,
   "buildYear": null,
   "market": null,
   "advertiserType": "agency",
-  "agencyName": "Biuro Sprzedaży Deweloperskiej",
+  "agencyName": "SGI",
   "city": "Warszawa",
-  "district": "Żoliborz",
-  "street": "Literacka",
+  "district": "Praga-Północ",
+  "street": "Objazdowa",
   "region": "mazowieckie",
   "lat": null,
   "lng": null,
-  "imagesCount": 4,
+  "imagesCount": 19,
   "propertyType": "flat",
   "dealType": "sale",
-  "createdAt": "2026-11-09T11:43:04Z",
-  "modifiedAt": "2026-11-11T19:06:55Z",
-  "scrapedAt": "2026-11-11T19:09:05Z"
+  "createdAt": "2026-05-29T08:29:44Z",
+  "modifiedAt": "2026-11-13T21:25:27Z",
+  "scrapedAt": "2026-11-13T21:30:27Z"
 }
 ```
 
