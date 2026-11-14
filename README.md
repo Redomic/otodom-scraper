@@ -11,7 +11,7 @@ Extract property listings from any Otodom.pl search: price, area, rooms, locatio
 - **Sort results**: control the order with `sortBy` (`default`, `newest`, `oldest`, `price_asc`, `price_desc`, `area_asc`, `area_desc`). With a low `maxItems`, sorting decides which listings you get.
 - **Priced rows only by default**: listings without a published price are dropped from the output. Set `includeNoPrice: true` to also return them with `priceAmount`/`priceCurrency` null.
 - **Price per m² filters**: set `pricePerM2Min`/`pricePerM2Max` to target deals by unit price; rows outside the range are excluded (falls back to `priceAmount/areaM2` when `pricePerM2` is missing).
-- **Optional full ad details** (`fetchDetails`): set `fetchDetails: true` to open each listing's offer page and merge GPS (`lat`/`lng`), `buildYear`, `totalFloors`, `monthlyCharges` (czynsz), `heating`, `buildingType`, `buildingMaterial`, `windowsType`, `ownership`, `constructionStatus`, `market`, `features`, the full `photos` gallery and the `description` into the row. Default `false` for fast search-card-only runs with lower proxy cost.
+- **Full ad details by default** (`fetchDetails`): opens each listing's offer page to add GPS (`lat`/`lng`), `buildYear`, `totalFloors`, `monthlyCharges` (czynsz), `heating`, `buildingType`, `buildingMaterial`, `windowsType`, `ownership`, `constructionStatus`, `market`, `features`, the full `photos` gallery and the `description`. Uses datacenter requests only (never escalates detail fetches to residential); set `fetchDetails: false` for faster search-card-only runs with lower proxy traffic.
 - **Radius search**: set centre `lat`/`lng` plus `radiusKm` (e.g. Warsaw centre with `radiusKm: 2`) to keep only rows within that distance. Every returned row includes `distanceKm`; rows without GPS are excluded.
 - **Monitor mode**: run on a schedule to get only `new`, `changed` (e.g. price change) and `removed` listings since the previous run. `changed` rows include current price fields plus `previousPriceAmount`, `previousPriceCurrency`, and `previousPricePerM2` (when present in state). Each monitor row also carries `priceHistory` (append-only observations stored from this monitor, last 20), `priceChangePct` and `priceDirection` (`up`/`down`/`flat`/`new`) computed from stored snapshots without extra requests. State is kept per source URL in a named key-value store. Use `droppedOnly` to emit only rows whose price dropped while still tracking all changes in state and summary counts.
 - Per-source status rows and a run summary. Empty or failed sources are reported, never silently skipped.
@@ -23,32 +23,52 @@ Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](samp
 
 ```json
 {
-  "id": 68057065,
-  "url": "https://www.otodom.pl/pl/ad/1-pokojowe-mieszkanie-37m2-balkon-bezposrednio-ID4ByKB",
-  "title": "1-pokojowe mieszkanie 37m2 + balkon Bezpośrednio",
-  "priceAmount": 791883,
+  "id": 68566433,
+  "url": "https://www.otodom.pl/pl/oferta/3-pokoje-garaz-bialoleka-ID4DHgd",
+  "title": "3 pokoje | Garaż | Białołęka",
+  "priceAmount": 799000,
   "priceCurrency": "PLN",
-  "pricePerM2": 21066.32,
-  "areaM2": 37.59,
-  "rooms": 1,
-  "floor": 1,
-  "totalFloors": null,
-  "buildYear": null,
-  "market": null,
+  "pricePerM2": 11979.01,
+  "areaM2": 66.7,
+  "rooms": 3,
+  "floor": 2,
+  "totalFloors": 3,
+  "buildYear": 2009,
+  "market": "secondary",
   "advertiserType": "agency",
-  "agencyName": "SGI",
+  "agencyName": "DYBOWSCY NIERUCHOMOŚCI",
   "city": "Warszawa",
-  "district": "Praga-Północ",
-  "street": "Objazdowa",
+  "district": "Białołęka",
+  "street": "Żeglugi Wiślanej",
   "region": "mazowieckie",
-  "lat": null,
-  "lng": null,
-  "imagesCount": 19,
+  "lat": 52.36099,
+  "lng": 21.03732,
+  "imagesCount": 11,
   "propertyType": "flat",
   "dealType": "sale",
-  "createdAt": "2026-05-29T08:29:44Z",
-  "modifiedAt": "2026-11-13T21:25:27Z",
-  "scrapedAt": "2026-11-13T21:30:27Z"
+  "createdAt": "2026-10-26T12:21:20Z",
+  "modifiedAt": "2026-11-14T13:52:20Z",
+  "monthlyCharges": 0,
+  "features": [
+    "balcony",
+    "garage"
+  ],
+  "photos": [
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtxZThydDVleWMzcDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Y2aWzMg-_tuaCTJkd8GlzJOb83IcEDxOSz5h50hOHKs/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijg1emh2N3d4MGoycTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.yYAQgpK8Ar7bAkP_5V0hVwiV8yqL-sCCW-R0QmqGjIM/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZyOHB6a3hrZmZtNDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.1f_V20-_alcNGmjr61Xr0Y-y9PscHZw2JXX_xBKS_bM/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im5wcnEwa21kM2NqMTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.b-avJ5nKwZTxHEbl7pxtmzUG-_W4Hy7Jp5ncLra34ug/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImdsOThleGExejQxczMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0ivFfaZo5lNPZhA-_Hg9m9UjyLkMjUR5rVJ5YBEHREk/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InB1Y2pveG9zYjlqaS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.oRj7bxsZaOOzDjKKW8jZg-tBD9rD9w-5bP-DbQtouOQ/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imx0YzAwMjFjbGJvYjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.SpgPM4DaRGHOSTjG-7MkVDzWSX3mKKahSwVlQZnwJsY/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ink2OGNlODI1MGRzNi1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.bYomvcoQgD8D_hSd-obbH2PY8QXDSUwHB8O7Rn3yRzQ/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjVrbnZtMmYzMmI0cTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.9cAl9jKrZ9dtfQAg99QknO54FkVGVc37h5lhEjFJ3jc/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjRzcWRyY21sNXFwbjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.pP692niEoRIBgbpz2FRcOAUA88HpW19SVRfYCso2oL4/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjVlM25qYXR0dmczcDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.NJjgQ3LWP6sR3prZlf2fhWmuL1Boo0L_kgf4K7b3oWU/image;s=2048x1536;q=80"
+  ],
+  "description": "Balans między miejską wygodą a odpoczynkiem na łonie natury.\nFunkcjonalne mieszkanie, które pozwala na szybkie wprowadzenie się bez konieczności przeprowadzania remontów. Ta oferta na warszawskim osiedlu Regaty to rozsądny wybór dla rodzin i osób aktywnych, ceniących uporządkowaną przestrzeń oraz bliskość terenów spacerowych nad Kanałem Żerańskim.\nPARAMETRY MIESZKANIA:\n• Metraż: 66,70 m²\n• Liczba pokoi: 3\n• Piętro: 2\n• Rok budowy: 2009\n• Balkon: 6,4 m²\n• Klimatyzacja: Tak\n• Stan: Do zamieszkania\n• Garaż: Tak\nOPIS WNĘTRZA I ROZKŁAD:\nMieszkanie o powierzchni niemal 67 m² zostało zaprojektowane z naciskiem na wygodę codziennego użytkowania. Część dzienną tworzy jasny salon połączony z przestronną kuchnią, w której bez problemu mieści się pełnowymiarowy stół. Jest to idealne rozwiązanie do celebrowania wspólnych posiłków i rodzinnych rozmów. Część prywatna to dwie niezależne sypialnie, które mogą pełnić funkcję pokoi dziecięcych, sypialni głównej czy gabinetu do pracy. Dużym atutem przy trzypokojowym układzie jest rozdzielenie węzła sanitarnego na główną łazienkę oraz osobne WC, co rozwiązuje problem porannych kolejek. Dopełnieniem przestrzeni jest balkon o powierzchni 6,4 m². Nieruchomość sprzedawana jest w stanie gotowym do wejścia, wymaga jedynie odświeżenia.\nLOKALIZACJA I KOMUNIKACJA:\nOsiedle Regaty to świetnie zorganizowana przestrzeń na mapie warszawskiej Białołęki. Miejsce to docenią zwłaszcza miłośnicy aktywnego wypoczynku oraz rodziny z dziećmi. Zaledwie 500 m (kilka minut spacerem) dzieli budynek od Kanału Żerańskiego, oferującego kilometry ścieżek pieszych i rowerowych. Trasa prowadzi, aż nad sam Zalew Zegrzyński, gdzie można odpocząć na plaży lub w restauracji. Tuż pod domem znajdują się Żabka, piekarnia, warzywniak oraz pyszne Zenko Sushi. W najbliższej okolicy znajdują się sklepy Biedronka, Netto, Rossmann oraz apteka. W sąsiedztwie dostępna jest pełna infrastruktura edukacyjna oraz place i sale zabaw. W pobliżu osiedla znajdują się przystanki autobusowe, które zapewniają bezpośrednie połączenie ze stacją Metro Kondratowicza. Szybki dojazd do trasy S8 gwarantuje sprawne poruszanie się samochodem po Warszawie oraz drogach wylotowych.\nSTAN PRAWNY I BEZPIECZEŃSTWO:\nNieruchomość stanowi pełną własność z założoną Księgą Wieczystą. Czysty stan prawny sprawia, że transakcja jest bezpieczna, a zakup mogą Państwo z powodzeniem sfinansować przy pomocy kredytu hipotecznego.\nGaraż dodatkowo płatny 50 000 zł.\nZakup tej nieruchomości wiąże się ze sprzedażą Twojego obecnego mieszkania lub domu?\nZapraszam do kontaktu. Zapewniam pełną koordynację obu transakcji, dzięki czemu przejdziesz przez cały proces płynnie, bezpiecznie i bez niepotrzebnego stresu.\nMalwina Arusztowicz\nDybowscy Nieruchomości",
+  "ownership": "full_ownership",
+  "scrapedAt": "2026-11-14T13:59:22Z"
 }
 ```
 
