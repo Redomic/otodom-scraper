@@ -18,83 +18,122 @@ Flats for sale across Poland, from the default input on 15 November 2026:
 
 Each row also carries the floor and the building's total floors, monthly charges (czynsz), heating, building type and material, ownership type, elevator, energy certificate, available-from date, the street, GPS coordinates, the agency name, the listing and update dates, the description and the photos. Listings also carry `daysOnMarket`, the whole number of days since the ad was first posted, so you can tell a stale listing from a fresh one at a glance.
 
+Location goes down to the neighbourhood as well: `subdistrict` names the area inside the district, the name buyers actually search for. A Żabiniec rental in Kraków sits in Prądnik Biały district and returns:
+
+```json
+{ "district": "Prądnik Biały", "subdistrict": "Żabiniec" }
+```
+
+The Ursus flat returns `"subdistrict": "Skorosze"`, and a listing with no published neighbourhood leaves the key out.
+
 Rental rows also carry `deposit`, the refundable kaucja a landlord asks for, when the advertiser publishes it on the offer page. For example, a two-room 40 m² flat in Kraków's Prądnik Biały listed at 2,600 PLN a month shows a 3,000 PLN deposit and 600 PLN in monthly charges.
+
+Listings posted by an agency or developer include `agencyUrl`, the public agency profile on Otodom, so you can open the seller's other listings in one click. The example Ursus flat points to `https://www.otodom.pl/pl/firmy/biura-nieruchomosci/property-in-ID7988985`; private owners have no agency page and leave the field out.
+
+Those rows also carry `agencyLicenseNumber`, the business licence Otodom publishes on the agency's profile, so you can check who is selling before you call. The Ursus agency's licence is 27548; private ads leave the field out.
+
+Every listing carries `coverPhoto`, one direct link to its main photo, so you can put a thumbnail in a spreadsheet without unpacking the full `photos` list. It comes from the search card itself, so even fast runs with full details off return it, and it matches the first photo when details are on. The Żabiniec rental above returns:
+
+```json
+{ "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJvOXVibmh0M3ppbjMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5l4gKBNfx0dLBbM9Tq67Vdr52mFNIYJmj495uiTqwNc/image;s=2048x1536;q=80" }
+```
+
+Every search row also carries `amenities`, a plain list of the features Otodom shows on the card — balcony, parking, separate kitchen, secure building — so you can spot a flat with a balcony without opening each ad. It is read from the card itself, so fast runs with full details off still carry it, and a listing with no published features leaves the key out. The Żabiniec rental search row returns:
+
+```json
+{ "amenities": ["balcony"] }
+```
+
+An Ursus flat for sale lists `"amenities": ["separate kitchen", "basement", "secure building"]`.
 
 ## Sample output
 Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](sample.csv)
 
 ```json
 {
-  "id": 68583116,
-  "url": "https://www.otodom.pl/pl/oferta/2-pok-ustawne-do-wejscia-balkon-inwestycja-winda-0-prowizji-ID4DLBi",
-  "title": "2 pok.| Ustawne | Do wejścia | Balkon | Inwestycja| Winda | 0 prowizji",
-  "priceAmount": 730000,
+  "id": 68299258,
+  "url": "https://www.otodom.pl/pl/oferta/przepiekny-apartament-ul-mokotowska-srodmiescie-ID4CzKV",
+  "title": "Przepiękny apartament ul. Mokotowska Śródmieście",
+  "priceAmount": 9500,
   "priceCurrency": "PLN",
-  "pricePerM2": 21313.87,
-  "areaM2": 34.25,
-  "rooms": 2,
-  "floor": 3,
-  "totalFloors": 8,
-  "buildYear": 2022,
-  "market": "secondary",
+  "pricePerM2": null,
+  "areaM2": 76,
+  "rooms": 3,
+  "floor": 2,
+  "totalFloors": 4,
+  "buildYear": 1904,
+  "market": null,
   "advertiserType": "agency",
-  "agencyName": "Heimstaden",
+  "agencyName": "OtoVilla Real Estate",
   "city": "Warszawa",
-  "district": "Mokotów",
-  "street": "Bokserska 54",
+  "district": "Śródmieście",
+  "street": "Mokotowska",
   "region": "mazowieckie",
-  "lat": 52.17223,
-  "lng": 20.995308,
-  "imagesCount": 16,
+  "lat": 52.22261,
+  "lng": 21.019772,
+  "imagesCount": 18,
   "propertyType": "flat",
-  "dealType": "sale",
-  "createdAt": "2026-10-30T13:46:16Z",
-  "modifiedAt": "2026-11-16T20:00:18Z",
-  "daysOnMarket": 17,
-  "monthlyCharges": 206,
+  "dealType": "rent",
+  "createdAt": "2026-08-10T13:19:53Z",
+  "modifiedAt": "2026-11-17T22:45:46Z",
+  "daysOnMarket": 99,
+  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/otovilla-real-estate-ID7911275",
+  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImppZnJjOXhubThlOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.eyuBhlqFMiLd888IKA_598bG25wBuwLLDRdnDun-nyk/image;s=2048x1536;q=80",
+  "amenities": [
+    "air conditioning"
+  ],
+  "subdistrict": "Śródmieście Południowe",
+  "monthlyCharges": 500,
+  "agencyLicenseNumber": "24573",
   "features": [
-    "balcony",
-    "garage",
-    "lift",
-    "usable_room",
-    "furniture",
-    "washing_machine",
+    "air_conditioning",
     "dishwasher",
+    "furniture",
     "fridge",
     "stove",
     "oven",
-    "entryphone",
-    "monitoring",
-    "closed_area"
+    "washing_machine",
+    "tv",
+    "entryphone"
   ],
   "photos": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjA1ZDFnMGlpeWUxNC1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.HK8mWV5ELxLtSCJNSJe5XBAS-n6jKdKtUpG7kj9SPlY/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InVhdHU0Z3AweWViMzMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.2wn08M8kT17F84zfe6t4B7l7fjFTl3fh3MbbRfhMSoA/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InNoaHR4N3ZueDF6cC1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.jytZ7b7sCW5uz0y1AhR4P_H306rN26UfLPnk7Ys4uqE/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IngzbHZqMXp1MXcyeC1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.isy4JGnnQrG3sT-uryX0gZv24XqiGZW-mulQx7kbjOY/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJ3dnBkc3oyenNkZDEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.AkUjRr1qJFDlgr834qfv-FUXM5fb-Y-q6v42dRMYId4/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImltYjg2MXNsb2wyNTMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.6R1Ee6bg7uINXx7Q2at9cKIpbX4GQVbks5x1sFtgemk/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVqNGxjM25reXY1dzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Pj44CMcG7XgVEO3JEhzHUdx87dX928NN8yIkE3fbva4/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imw0b2lqM3MzNDFmZDEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.f6UV2HRa57LIWkPg_Bvqb3_Cbe04zjQJKnNVvfV_-So/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9vdjZrdTI1Z20xNjItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.p5s41ynkKL2BdhYy8MqeiRxKCDL3cVfE5Dx-EPoaAk4/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRyNHJtcmU3eXVmczMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.C9Df5YZ7cDe-pMRQi6V7YVyfDQwlDQbHX3KrcxzJDKY/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1ra2s0NjV0MXcxay1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.dtowloe864NqzIdmkRMe_q7KdzToqMszDseRiSSrlng/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IndnbDBmbWZkeXBpODMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.s89w3vQrVG9C1MC_VSX--iEaPM5VB0W9If7r1FyD4Xc/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImYycjl5ZXZ5dHFmZTMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.NRRHPK9ajXNT793V_BkB4LdQQbXKMzLhKNNJHug3k18/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJnM25lcDd5dG5kZjMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0gGCqgcEjVUw3b4_lCCWj0hGl9vAq_cCcwJ5a8KrRCg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBheGZwbzI4amN1Ny1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UTN2PfxVd4XSviBomt0cDk5VwAJBluMCODkOIGCLziU/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im83eWtxMzB0dXdmMTEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.SH7qh5a0kyrr9udbtzTwpJ-cQ5316keAM6c0ZHa3YB4/image;s=2048x1536;q=80"
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImppZnJjOXhubThlOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.eyuBhlqFMiLd888IKA_598bG25wBuwLLDRdnDun-nyk/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ind4c2V1MHk3cGl5dDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.pOuRxlAmnkH9hWZos3Zb8vAXMPlQcZje6FsvxkMRcIg/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImN4bmV6YXI2MDhyNC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.5fMGMW_5irTiXtwNEmns6AYAuzQcKwoT6A4FY2VRUjQ/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImYwbHJ1czIwMXRnbDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.CfoUwbwmXKCvA7Ow8rzIkTa8y6Uo-be2z9robSUZc_M/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjcwMmtyNWR6eDE0ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.oVJQnwKPvdSjGONApLtbO7d4_ItIm5L-13-wEoaaq3I/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjN5cm52NnhteDM2bDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-77V1sbAyNEka5oSnND5lKUIuHtrgGXf1MjNidOKe8g/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inc5MXRiYTJ5ZjhxdzItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0LVJwST_239tEWwyCbzLhcheqsqH5G7-AxIdTrhaTbw/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Indxazk0eHhuMmw5dDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.F4YFo5w5vOQ264fRF3nzlumEeagKpCQcI1rjuwiDvQU/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNlemp1aWx6bnJydDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-w1kNmCKxPlT2Cqxq3EmlQXf-xI6wYyjgHzpp2CNTFw/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdxY3J3bXdsYWN2MjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.roI2hw_gLWx9rUSs6MaJBfXa_fRhweh2nmQfxsVC39M/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRoMW9oc3hhMHcwNzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.8ZPfcs4SrursMFD_xC2-rNwlW5LWui1aTGIz71w3x9c/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im96ejVob2lpNHZ4dDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UKI897p4LaADlnZQngplo90DKutadOHsYV-QRTe_DS8/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjYxM211dDZycHd5cjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.iTkNrWVP1D6Gye4CDTNJzxxb1mGRq69ptI32hjA84QY/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImQ0dmdlZnNmd2NmOTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.p1pMhVI0dFUv6iHSDRPixBfqnJIBqqJKyLYgDB7dHSA/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImY4ZmtnN3hxaG1jZDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Lz3A7_h5HHhVf-vhNBJbXpzkS2ewV49amgYd4LVM3PU/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InV5MnFjZ3BybXNrZjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Emi2rRMbNnT5rhPZ8Hv2eZso8c9JZULp9i2aIGY7nSU/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtuajJ4ZGNoa3h4cS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.IkAEahGuKVtEjv7pu-QSmg9cGOOa5pc51nbbGpa8zyg/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZqazd6dmU1bm43MDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YmKbHPI8522FakW8460iZXQolrcNBgyVRpmHmnN1QQo/image;s=2048x1536;q=80"
   ],
-  "description": "NIERUCHOMOŚĆ:\nPrezentujemy przytulne, gotowe do wprowadzenia (umeblowane i wyposażone) mieszkanie na zielonym osiedlu na Mokotowie.\nBez prowizji, bez pośredników, od właściciela.\nPowierzchnia 34,25 m2\nPiętro 3\nBalkon\nWykończone i umeblowane\n5 lat rękojmi!\nROZKŁAD POMIESZCZEŃ:\nSalon + aneks kuchenny - 15,82 m2\nSypialnia - 8,08 m2\nŁazienka - 4,55 m2\nHol - 4,97 m2\nBalkon - 5,24 m2\nChcesz obejrzeć mieszkania 2-pokojowe o innych rozkładach w tym samym budynu? Zadzwoń do mnie - przedstawię dostępne opcje!\nOSIEDLE:\nMoko Botanika – nowoczesne mieszkania na zielonym Mokotowie!\nZamieszkaj w wyjątkowej inwestycji Moko Botanika, położonej przy ul. Bokserskiej – w sercu Mokotowa, jednej z najbardziej pożądanych dzielnic Warszawy.\nTo idealne miejsce dla osób, które cenią komfort, styl i bliskość natury.\nNowoczesna architektura, wysoki standard wykończenia i przemyślane układy mieszkań – od funkcjonalnych kawalerek po przestronne, pięciopokojowe apartamenty – sprawiają, że każdy znajdzie tu przestrzeń idealną dla siebie. Każde mieszkanie posiada loggię lub taras, które pozwalają cieszyć się chwilą w otoczeniu zieleni.\nInwestycja wyróżnia się ekologicznymi rozwiązaniami – panele fotowoltaiczne oraz certyfikat BREEAM potwierdzają jej energooszczędny charakter. Dodatkowo projekt zdobył prestiżowe wyróżnienie Top Site Innovation, które potwierdza najwyższą jakość i innowacyjność wykonania.\nLOKALIZACJA:\nW pobliżu znajdują się sklepy, punkty usługowe, szkoły i przedszkola, a także dogodne połączenia komunikacyjne – przystanki autobusowe i stacje kolejowe zapewniają szybki dojazd do centrum miasta.\nDodatkowym atutem jest bliskość centrum handlowego Westfield Mokotów (Galeria Mokotów) oraz terenów zielonych i rekreacyjnych, idealnych do spacerów i aktywnego wypoczynku.\nCENA:\nmieszkanie 730 000 zł\nmiejsce parkingowe w garażu podziemnym - 55 000zł/szt.\nkomórka lokatorska (o różnej powierzchni) -7500 zł/m2 (nieobowiązkowa).\nZadzwoń i umów się na prezentację – mieszkanie jest dostępne od zaraz.\nOgłoszenia na portalu nie stanowią oferty w rozumieniu art. 66 Kodeksu cywilnego.\nZdjęcia mieszkania są poglądowe- zapraszamy na prezentację!\nO SPRZEDAJĄCYM:\nWłaścicielem nieruchomości jest Heimstaden – wiodąca europejska firma działająca w sektorze nieruchomości mieszkaniowych. Grupa jest obecna w Norwegii, Szwecji, Danii, Finlandii, Wielkiej Brytanii, Niemczech, Holandii, Czechach i Polsce. Heimstaden dysponuje około 159 tys. mieszkań o łącznej wartości około 30 mld euro. Firma koncentruje się na nabywaniu, budowie, sprzedaży i zarządzaniu budynkami w oparciu o najwyższej jakości standardy współpracy z partnerami i klientami.\nENG\nPROPERTY:\nWe present a cozy, ready-to-move-in (furnished and equipped) apartment in a green neighborhood in Mokotów.\nNo commission, no agents, from the owner.\nArea 34.25 m2\n3rd floor\nBalcony\nFinished and furnished\n5-year warranty!\nROOM LAYOUT:\nLiving room + kitchenette - 15.82 m2\nBedroom - 8.08 m2\nBathroom - 4.55 m2\nHallway - 4.97 m2\nBalcony - 5.24 m2\nWould you like to see 2-bedroom apartments with different layouts in the same building? Give me a call! I'll show you the available options!\nDEVELOPMENT:\nMoko Botanika – modern apartments in green Mokotów!\nLive in the unique Moko Botanika development, located on Bokserska Street – in the heart of Mokotów, one of the most desirable districts of Warsaw.\nIt is the perfect place for people who value comfort, style, and proximity to nature.\nModern architecture, high standard of finish and well-thought-out apartment layouts – from functional studios to spacious five-room apartments – mean that everyone will find the perfect space for themselves here.\nThe investment stands out for its ecological solutions – photovoltaic panels and BREEAM certification confirm its energy-efficient character. In addition, the project with\nPRICE:\napartment PLN 730 000\nparking space in the underground garage PLN 55,000/each\nstorage room (various sizes) PLN 7,500/m² (optional).\nCall and make an appointment for a viewing – the apartment is available immediately.\nAdvertisements on the portal do not constitute an offer within the meaning of Article 66 of the Civil Code.\nThe photos of the apartment are for illustrative purposes only – we invite you to a presentation!\nABOUT THE SELLER:\nThe property is owned by Heimstaden – a leading European company operating in the residential real estate sector. The group is present in Norway, Sweden, Denmark, Finland, the United Kingdom, Germany, the Netherlands, the Czech Republic, and Poland. Heimstaden has approximately 159,000 apartments with a total value of approximately EUR 30 billion. The company focuses on the acquisition, construction, sale, and management of buildings based on the highest standards of cooperation with partners and customers.",
-  "elevator": true,
-  "availableFrom": "2026-10-30",
+  "description": "Nowoczesny apartament w przepięknej kamienicy przy ul. Mokotowskiej w Warszawie\nTrzypokojowy apartament z dwiema łazienkami wykończony w bardzo wysokim standardzie, całkowicie umeblowany i gotowy do wprowadzenia.\nLokalizacja:\nWyjątkowy adres na mapie Warszawy. Kamienica przy ul. Mokotowska oferuje idealne warunki dla osób poszukujących ekskluzywnych apartamentów. Ulica ta należy dziś do najbardziej prestiżowych lokalizacji, chętnie wybieranych przez polskich projektantów, artystów oraz właścicieli butików i eleganckich lokali gastronomicznych.\nMokotowska mieści się w południowej części Śródmieścia, zapewniając dogodny i szybki dojazd do innych dzielnic zarówno komunikacją miejską, jak i samochodem. Podróż autem do Port Lotniczy im. Fryderyka Chopina zajmuje około 20 minut. W bezpośrednim sąsiedztwie znajdują się Park Ujazdowski, Łazienki Królewskie, Parlament oraz Hotel Sheraton.\nBudynek:\nCzteropiętrowa, całkowicie odrestaurowana kamienica zachwyca starannie odtworzonymi detalami historycznej architektury oraz wyjątkową dbałością o estetykę.\nBudynek wzniesiony w 1904 roku dla hrabiego Rodryga Mroczkowskiego, znany jako „Krakowiacy i Górale”, wyróżnia się charakterystycznymi rzeźbami zdobiącymi główną elewację.\nRozkład:\nApartament o powierzchni 74 m² zlokalizowany jest na 2. piętrze. Składa się z przestronnego salonu z otwartą kuchnią, sypialni z prywatną łazienką, gabinetu, łazienki z prysznicem oraz hallu z dużą szafą wykonaną na wymiar. Wnętrze zostało zaprojektowane przez architekta, co zapewnia spójny styl, komfort i funkcjonalność.\nDodatkowe informacje i koszty:\nApartament jest klimatyzowany i w pełni wyposażony.\nMedia płatne dodatkowo według zużycia – w formie zaliczki 400 zł miesięcznie – oraz prąd i opcjonalnie internet.\nZapraszam na prezentację\nModern apartment in a beautiful historic tenement house on Mokotowska Street in Warsaw\nA three-room apartment finished to a very high standard, fully furnished and ready to move in.\nLocation:\nA truly exceptional address in the heart of Warsaw. The tenement house on ul. Mokotowska offers an ideal setting for those seeking an exclusive residence. Today, this street is one of the most desirable locations for Polish designers, artists, as well as owners of boutique shops and upscale dining venues.\nMokotowska is situated in the southern part of Śródmieście, ensuring quick access to other districts both by public transport and private car. The drive to Warsaw Chopin Airport takes approximately 20 minutes. The building is located near Ujazdowski Park, Łazienki Królewskie, the Parliament of Poland and the Sheraton Hotel.\nBuilding:\nA four-storey, fully restored tenement house, showcasing original architectural details and outstanding craftsmanship.\nBuilt in 1904 for Count Rodryg Mroczkowski, the building is also known as “Krakowiacy i Górale” due to the characteristic sculptures adorning its main façade.\nLayout:\nThe 74 m² apartment is located on the 2nd floor. It consists of a spacious living room with an open kitchen, a bedroom with an en-suite bathroom, a study, a bathroom with a shower, and a hall with a large custom-made wardrobe. The interior was designed by an architect, ensuring a cohesive style, comfort, and high functionality.\nAdditional information and costs:\nThe apartment is air-conditioned and fully equipped.\nUtilities are paid additionally based on consumption – in the form of a 400 PLN monthly advance payment – plus electricity and optional internet.\nTreść niniejszego ogłoszenia nie stanowi oferty handlowej w rozumieniu Kodeksu Cywilnego.\nOferta wysłana z programu IMO dla pośredników",
+  "elevator": false,
   "heating": "urban",
-  "buildingType": "block",
-  "buildingMaterial": "reinforced_concrete",
-  "windowsType": "plastic",
-  "ownership": "full_ownership",
+  "buildingType": "tenement",
+  "windowsType": "wooden",
   "constructionStatus": "ready_to_use",
-  "scrapedAt": "2026-11-16T20:05:03Z"
+  "scrapedAt": "2026-11-17T22:57:21Z",
+  "changeType": "new",
+  "priceHistory": [
+    {
+      "priceAmount": 9500,
+      "priceCurrency": "PLN",
+      "pricePerM2": null,
+      "observedAt": "2026-11-17T22:57:21Z"
+    }
+  ],
+  "priceDirection": "new",
+  "priceChangePct": null
 }
 ```
 
