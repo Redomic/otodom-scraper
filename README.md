@@ -16,6 +16,24 @@ Flats for sale across Poland, from the default input on 15 November 2026:
 | Apartament premium w kamienicy z windą | 1,069,000 | 18,630 | 57.38 | 2 | 2024 | Wrocław | Stare Miasto | resale |
 | 4 niezależne pokoje, Stare Miasto | 1,231,000 | 21,982 | 56 | 4 | 1968 | Kraków | Stare Miasto | resale |
 
+Prices also come ready to paste into a spreadsheet: `priceFormatted` and `pricePerM2Formatted` spell the number the Polish way, with a space between thousands and a comma before decimals. The Ursus flat listed further down returns:
+
+```json
+{ "priceFormatted": "659 000 PLN", "pricePerM2Formatted": "16 475 PLN/m²" }
+```
+
+Some sellers hide the asking price on Otodom ("Zapytaj o cenę"). Those ads carry `priceOnRequest: true` next to an empty `priceAmount`, so you can tell a deliberately hidden price from a field that failed to load; add `includeNoPrice: true` to get them. Every listing with a published price has `priceOnRequest: false`. A four-room 74 m² flat in Kraków's Bieżanów-Prokocim returns:
+
+```json
+{
+  "title": "4-pokojowe mieszkanie 74m2 + balkon Bezpośrednio",
+  "city": "Kraków",
+  "district": "Bieżanów-Prokocim",
+  "priceAmount": null,
+  "priceOnRequest": true
+}
+```
+
 Each row also carries the floor and the building's total floors, monthly charges (czynsz), heating, building type and material, ownership type, elevator, energy certificate, available-from date, the street, GPS coordinates, the agency name, the listing and update dates, the description and the photos. Listings also carry `daysOnMarket`, the whole number of days since the ad was first posted, so you can tell a stale listing from a fresh one at a glance.
 
 Location goes down to the neighbourhood as well: `subdistrict` names the area inside the district, the name buyers actually search for. A Żabiniec rental in Kraków sits in Prądnik Biały district and returns:
@@ -46,94 +64,95 @@ Every search row also carries `amenities`, a plain list of the features Otodom s
 
 An Ursus flat for sale lists `"amenities": ["separate kitchen", "basement", "secure building"]`.
 
+Rows also carry the three status flags Otodom publishes on each ad: `isPromoted` marks a listing the seller has paid to advertise, `isExclusiveOffer` marks an exclusive mandate, and `isPremium` marks a listing Otodom places in its premium tile. They come from the listing itself, so fast runs with full details off carry them too; a listing with no published flag leaves the key out. The Żabiniec rental above returns:
+
+```json
+{ "isPromoted": false, "isExclusiveOffer": false, "isPremium": false }
+```
+
+A Radwanice house listed at 836,000 PLN returns `"isPremium": true` while `"isPromoted"` stays `false`, so you can tell a premium placement from a promoted ad.
+
+When the advertiser publishes a floor plan, the row carries `floorPlans`, direct links to the layout images so you can check the layout without opening the ad. It is read from the offer page, so it appears on detail-enriched rows and listings pasted by URL; a listing with no published plan leaves the key out. The Ursus flat returns:
+
+```json
+{ "floorPlans": ["https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImFlbmNmaXVvc2x3ZzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.QB35E99D1T5GpxYLaX0xVO2GSFk1TV968MaNhWqwgsY/image"] }
+```
+
+When the advertiser publishes an online viewing, the row carries `virtualTour`, a direct link to the 360° walkthrough, 3D tour or video so you can see the place before you visit. It appears on rows with full details and on listings pasted by URL; a listing with no published tour leaves the key out. The Ursus flat returns:
+
+```json
+{ "virtualTour": "https://sb360.online/u7do5q" }
+```
+
 ## Sample output
 Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](sample.csv)
 
 ```json
 {
-  "id": 68299258,
-  "url": "https://www.otodom.pl/pl/oferta/przepiekny-apartament-ul-mokotowska-srodmiescie-ID4CzKV",
-  "title": "Przepiękny apartament ul. Mokotowska Śródmieście",
-  "priceAmount": 9500,
+  "id": 68583142,
+  "url": "https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-47m2-2-ogrodki-ID4DLBI",
+  "title": "2-pokojowe mieszkanie 47m2 + 2 ogródki",
+  "priceAmount": 862280,
   "priceCurrency": "PLN",
-  "pricePerM2": null,
-  "areaM2": 76,
-  "rooms": 3,
-  "floor": 2,
-  "totalFloors": 4,
-  "buildYear": 1904,
-  "market": null,
+  "pricePerM2": 18062,
+  "areaM2": 47.74,
+  "rooms": 2,
+  "floor": 0,
+  "totalFloors": 6,
+  "buildYear": 2028,
+  "market": "primary",
   "advertiserType": "agency",
-  "agencyName": "OtoVilla Real Estate",
+  "agencyName": "RONSON DEVELOPMENT",
   "city": "Warszawa",
-  "district": "Śródmieście",
-  "street": "Mokotowska",
+  "district": "Bemowo",
+  "street": "Marynin",
   "region": "mazowieckie",
-  "lat": 52.22261,
-  "lng": 21.019772,
-  "imagesCount": 18,
+  "lat": 52.245304,
+  "lng": 20.927654,
+  "imagesCount": 7,
   "propertyType": "flat",
-  "dealType": "rent",
-  "createdAt": "2026-08-10T13:19:53Z",
-  "modifiedAt": "2026-11-17T22:45:46Z",
-  "daysOnMarket": 99,
-  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/otovilla-real-estate-ID7911275",
-  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImppZnJjOXhubThlOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.eyuBhlqFMiLd888IKA_598bG25wBuwLLDRdnDun-nyk/image;s=2048x1536;q=80",
+  "dealType": "sale",
+  "createdAt": "2026-10-30T13:48:31Z",
+  "modifiedAt": "2026-11-18T22:40:09Z",
+  "daysOnMarket": 19,
+  "priceFormatted": "862 280 PLN",
+  "pricePerM2Formatted": "18 062 PLN/m²",
+  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/ronson-development-ID10556616",
+  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlibG9vMndvdmpuZTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.48ytLIGjWPSgEIhyft2Rksq9HsCq-UXKf1gHfiFGzvg/image;s=2048x1536;q=80",
   "amenities": [
-    "air conditioning"
+    "garden",
+    "terrace",
+    "parking",
+    "ground floor"
   ],
-  "subdistrict": "Śródmieście Południowe",
-  "monthlyCharges": 500,
-  "agencyLicenseNumber": "24573",
+  "isPromoted": false,
+  "isExclusiveOffer": false,
+  "isPremium": false,
+  "priceOnRequest": false,
+  "subdistrict": "Górce",
   "features": [
-    "air_conditioning",
-    "dishwasher",
-    "furniture",
-    "fridge",
-    "stove",
-    "oven",
-    "washing_machine",
-    "tv",
-    "entryphone"
+    "garage",
+    "terrace",
+    "garden"
   ],
   "photos": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImppZnJjOXhubThlOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.eyuBhlqFMiLd888IKA_598bG25wBuwLLDRdnDun-nyk/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ind4c2V1MHk3cGl5dDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.pOuRxlAmnkH9hWZos3Zb8vAXMPlQcZje6FsvxkMRcIg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImN4bmV6YXI2MDhyNC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.5fMGMW_5irTiXtwNEmns6AYAuzQcKwoT6A4FY2VRUjQ/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImYwbHJ1czIwMXRnbDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.CfoUwbwmXKCvA7Ow8rzIkTa8y6Uo-be2z9robSUZc_M/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjcwMmtyNWR6eDE0ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.oVJQnwKPvdSjGONApLtbO7d4_ItIm5L-13-wEoaaq3I/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjN5cm52NnhteDM2bDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-77V1sbAyNEka5oSnND5lKUIuHtrgGXf1MjNidOKe8g/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inc5MXRiYTJ5ZjhxdzItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0LVJwST_239tEWwyCbzLhcheqsqH5G7-AxIdTrhaTbw/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Indxazk0eHhuMmw5dDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.F4YFo5w5vOQ264fRF3nzlumEeagKpCQcI1rjuwiDvQU/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNlemp1aWx6bnJydDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-w1kNmCKxPlT2Cqxq3EmlQXf-xI6wYyjgHzpp2CNTFw/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdxY3J3bXdsYWN2MjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.roI2hw_gLWx9rUSs6MaJBfXa_fRhweh2nmQfxsVC39M/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRoMW9oc3hhMHcwNzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.8ZPfcs4SrursMFD_xC2-rNwlW5LWui1aTGIz71w3x9c/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im96ejVob2lpNHZ4dDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UKI897p4LaADlnZQngplo90DKutadOHsYV-QRTe_DS8/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjYxM211dDZycHd5cjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.iTkNrWVP1D6Gye4CDTNJzxxb1mGRq69ptI32hjA84QY/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImQ0dmdlZnNmd2NmOTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.p1pMhVI0dFUv6iHSDRPixBfqnJIBqqJKyLYgDB7dHSA/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImY4ZmtnN3hxaG1jZDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Lz3A7_h5HHhVf-vhNBJbXpzkS2ewV49amgYd4LVM3PU/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InV5MnFjZ3BybXNrZjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Emi2rRMbNnT5rhPZ8Hv2eZso8c9JZULp9i2aIGY7nSU/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtuajJ4ZGNoa3h4cS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.IkAEahGuKVtEjv7pu-QSmg9cGOOa5pc51nbbGpa8zyg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZqazd6dmU1bm43MDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YmKbHPI8522FakW8460iZXQolrcNBgyVRpmHmnN1QQo/image;s=2048x1536;q=80"
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlibG9vMndvdmpuZTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.48ytLIGjWPSgEIhyft2Rksq9HsCq-UXKf1gHfiFGzvg/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcyM3QxOW14OTR1dC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x3JPJesfaIC1mcZS4vdP38_kZiZhV9PiTPS97IR4daM/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZjNDVob2F3dGpjMzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jSWy57bMQlNnS5yOsal4Jx7EGrQlHG-Ys6jQXxaQ1Sg/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjQ3NnFmcDZ2czR2ci1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x6t9901DvPdqym-8hiWHoWllGWKhaaz3DeY0DvbALH8/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1mOWxnYnk1dmp0cDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.GyFiTLjGsoKZwJp_2ldDVoyLUO_gBnfzV-pPOIt3JDg/image;s=2048x1536;q=80",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InozNzRuMWozODZpeDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.q-5IeMzB8xMkc9Ob1ky-1oTY_4n7rY6vO9dvp_Ywm4s/image;s=2048x1536;q=80"
   ],
-  "description": "Nowoczesny apartament w przepięknej kamienicy przy ul. Mokotowskiej w Warszawie\nTrzypokojowy apartament z dwiema łazienkami wykończony w bardzo wysokim standardzie, całkowicie umeblowany i gotowy do wprowadzenia.\nLokalizacja:\nWyjątkowy adres na mapie Warszawy. Kamienica przy ul. Mokotowska oferuje idealne warunki dla osób poszukujących ekskluzywnych apartamentów. Ulica ta należy dziś do najbardziej prestiżowych lokalizacji, chętnie wybieranych przez polskich projektantów, artystów oraz właścicieli butików i eleganckich lokali gastronomicznych.\nMokotowska mieści się w południowej części Śródmieścia, zapewniając dogodny i szybki dojazd do innych dzielnic zarówno komunikacją miejską, jak i samochodem. Podróż autem do Port Lotniczy im. Fryderyka Chopina zajmuje około 20 minut. W bezpośrednim sąsiedztwie znajdują się Park Ujazdowski, Łazienki Królewskie, Parlament oraz Hotel Sheraton.\nBudynek:\nCzteropiętrowa, całkowicie odrestaurowana kamienica zachwyca starannie odtworzonymi detalami historycznej architektury oraz wyjątkową dbałością o estetykę.\nBudynek wzniesiony w 1904 roku dla hrabiego Rodryga Mroczkowskiego, znany jako „Krakowiacy i Górale”, wyróżnia się charakterystycznymi rzeźbami zdobiącymi główną elewację.\nRozkład:\nApartament o powierzchni 74 m² zlokalizowany jest na 2. piętrze. Składa się z przestronnego salonu z otwartą kuchnią, sypialni z prywatną łazienką, gabinetu, łazienki z prysznicem oraz hallu z dużą szafą wykonaną na wymiar. Wnętrze zostało zaprojektowane przez architekta, co zapewnia spójny styl, komfort i funkcjonalność.\nDodatkowe informacje i koszty:\nApartament jest klimatyzowany i w pełni wyposażony.\nMedia płatne dodatkowo według zużycia – w formie zaliczki 400 zł miesięcznie – oraz prąd i opcjonalnie internet.\nZapraszam na prezentację\nModern apartment in a beautiful historic tenement house on Mokotowska Street in Warsaw\nA three-room apartment finished to a very high standard, fully furnished and ready to move in.\nLocation:\nA truly exceptional address in the heart of Warsaw. The tenement house on ul. Mokotowska offers an ideal setting for those seeking an exclusive residence. Today, this street is one of the most desirable locations for Polish designers, artists, as well as owners of boutique shops and upscale dining venues.\nMokotowska is situated in the southern part of Śródmieście, ensuring quick access to other districts both by public transport and private car. The drive to Warsaw Chopin Airport takes approximately 20 minutes. The building is located near Ujazdowski Park, Łazienki Królewskie, the Parliament of Poland and the Sheraton Hotel.\nBuilding:\nA four-storey, fully restored tenement house, showcasing original architectural details and outstanding craftsmanship.\nBuilt in 1904 for Count Rodryg Mroczkowski, the building is also known as “Krakowiacy i Górale” due to the characteristic sculptures adorning its main façade.\nLayout:\nThe 74 m² apartment is located on the 2nd floor. It consists of a spacious living room with an open kitchen, a bedroom with an en-suite bathroom, a study, a bathroom with a shower, and a hall with a large custom-made wardrobe. The interior was designed by an architect, ensuring a cohesive style, comfort, and high functionality.\nAdditional information and costs:\nThe apartment is air-conditioned and fully equipped.\nUtilities are paid additionally based on consumption – in the form of a 400 PLN monthly advance payment – plus electricity and optional internet.\nTreść niniejszego ogłoszenia nie stanowi oferty handlowej w rozumieniu Kodeksu Cywilnego.\nOferta wysłana z programu IMO dla pośredników",
+  "floorPlans": [
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcyM3QxOW14OTR1dC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x3JPJesfaIC1mcZS4vdP38_kZiZhV9PiTPS97IR4daM/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZjNDVob2F3dGpjMzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jSWy57bMQlNnS5yOsal4Jx7EGrQlHG-Ys6jQXxaQ1Sg/image"
+  ],
+  "description": "2-pokojowe mieszkanie numer B56 na parterze w Inwestycji Halo Bemowo Dewelopera RONSON DEVELOPMENT\nTeren spacerowy Polana (1 minuta pieszo)\nPrzystanek tramwajowy (5 minut pieszo)\nPark im. Księcia Janusza (15 minut pieszo)\nRynek Bazar na Kole (20 minut pieszo)\nCH Wola Park (8 minut samochodem)\nHalo Bemowo - poznaj inwestycję\nHalo Bemowo to nowa inwestycja mieszkaniowa grupy RONSON Development, realizowana przy ul. Marynin w warszawskiej dzielnicy Bemowo.\nHalo Bemowo – to propozycja dla osób, które chcą mieszkać w spokojnej okolicy, a jednocześnie pozostać blisko miasta. Zróżnicowana oferta mieszkań odpowie na potrzeby rodzin, singli i par.\nAtutem lokalizacji jest wygodny dostęp do komunikacji miejskiej oraz szybki dojazd do centrum Warszawy dzięki bliskości linii tramwajowej oraz niedalekiej odległości od stacji Metra.\nW pobliżu znajdują się tereny rekreacyjne, szkoły, przedszkola oraz Wola Park.\nMieszkania od 36 m2\nBalkony i tarasy z widokiem na zieleń\nInfrastruktura rowerowa\nNowoczesne elewacje i dopracowane detale\nPodziemny parking   i komórki lokatorskie\nHalo Bemowo - lokalizacja\nBemowo, ul. Marynin\n6,0 km do centrum\n6 min. spacerem do przystanku autobusowego\n6 min. spacerem do przystanku tramwajowego\n8 min. samochodem do stacji metra\ndojazd do centrum: 19 min samochodem\nIstotne punkty w okolicy inwestycji Przystanek autobusowy (414 m, 6 minut spacerem)\nPrzystanek tramwajowy (430 m, 6 minut spacerem)",
   "elevator": false,
-  "heating": "urban",
-  "buildingType": "tenement",
-  "windowsType": "wooden",
-  "constructionStatus": "ready_to_use",
-  "scrapedAt": "2026-11-17T22:57:21Z",
-  "changeType": "new",
-  "priceHistory": [
-    {
-      "priceAmount": 9500,
-      "priceCurrency": "PLN",
-      "pricePerM2": null,
-      "observedAt": "2026-11-17T22:57:21Z"
-    }
-  ],
-  "priceDirection": "new",
-  "priceChangePct": null
+  "availableFrom": "2028-10-16",
+  "ownership": "full_ownership",
+  "constructionStatus": "to_completion",
+  "scrapedAt": "2026-11-18T23:03:40Z"
 }
 ```
 
