@@ -16,6 +16,10 @@ Flats for sale across Poland, from the default input on 15 November 2026:
 | Apartament premium w kamienicy z windą | 1,069,000 | 18,630 | 57.38 | 2 | 2024 | Wrocław | Stare Miasto | resale |
 | 4 niezależne pokoje, Stare Miasto | 1,231,000 | 21,982 | 56 | 4 | 1968 | Kraków | Stare Miasto | resale |
 
+The Output tab opens on a Listings table of the main listing fields. A second Market & price history table groups `market`, `pricePerM2` and `priceChangePct` — Otodom publishes the market and the price change for only some ads, and price change appears after a repeat monitor run — so the first table does not open on columns that are empty for most ads. A third New builds table groups `developmentTitle` and `developmentUrl`, which only ads in a published project carry.
+
+Otodom leaves the per-m² price off rental cards. The scraper works it out from the advertised price and the area, so renters get the same comparison column as buyers: the Żabiniec flat below, 2,600 PLN a month for 40 m², returns `"pricePerM2": 65` and `"pricePerM2Formatted": "65 PLN/m²"`.
+
 Prices also come ready to paste into a spreadsheet: `priceFormatted` and `pricePerM2Formatted` spell the number the Polish way, with a space between thousands and a comma before decimals. The Ursus flat listed further down returns:
 
 ```json
@@ -46,6 +50,12 @@ The Ursus flat returns `"subdistrict": "Skorosze"`, and a listing with no publis
 
 Rental rows also carry `deposit`, the refundable kaucja a landlord asks for, when the advertiser publishes it on the offer page. For example, a two-room 40 m² flat in Kraków's Prądnik Biały listed at 2,600 PLN a month shows a 3,000 PLN deposit and 600 PLN in monthly charges.
 
+Houses and plots carry `plotArea`, the size of the land in square metres, so you can tell the building's floor area from the plot it stands on. It comes from the offer page and is left out when the advertiser does not publish it. A lakeside house in Góry with 350 m² of living space returns:
+
+```json
+{ "areaM2": 350, "plotArea": 2364 }
+```
+
 Listings posted by an agency or developer include `agencyUrl`, the public agency profile on Otodom, so you can open the seller's other listings in one click. The example Ursus flat points to `https://www.otodom.pl/pl/firmy/biura-nieruchomosci/property-in-ID7988985`; private owners have no agency page and leave the field out.
 
 Those rows also carry `agencyLicenseNumber`, the business licence Otodom publishes on the agency's profile, so you can check who is selling before you call. The Ursus agency's licence is 27548; private ads leave the field out.
@@ -63,6 +73,12 @@ Every search row also carries `amenities`, a plain list of the features Otodom s
 ```
 
 An Ursus flat for sale lists `"amenities": ["separate kitchen", "basement", "secure building"]`.
+
+Buyers who need parking can read `parkingType` without opening each ad: `garage` when Otodom lists a garage, `parking` for a parking spot. It comes from the listing card, so fast runs with full details off still carry it, and a listing with no published parking leaves the key out. The Kraków flat below, 940,000 PLN for 54 m² in Łagiewniki-Borek Fałęcki, returns:
+
+```json
+{ "parkingType": "parking", "amenities": ["balcony", "top floor", "parking", "secure building"] }
+```
 
 Rows also carry the three status flags Otodom publishes on each ad: `isPromoted` marks a listing the seller has paid to advertise, `isExclusiveOffer` marks an exclusive mandate, and `isPremium` marks a listing Otodom places in its premium tile. They come from the listing itself, so fast runs with full details off carry them too; a listing with no published flag leaves the key out. The Żabiniec rental above returns:
 
@@ -84,75 +100,108 @@ When the advertiser publishes an online viewing, the row carries `virtualTour`, 
 { "virtualTour": "https://sb360.online/u7do5q" }
 ```
 
+When a seller advertises an open house, the row carries `openDay`, the date and viewing window Otodom publishes, so you can plan a visit without opening each ad. It comes from the offer page, so it appears on detail-enriched rows and listings pasted by URL; a listing with no published open day leaves the key out. A listing advertising a viewing on 16 November returns:
+
+```json
+{ "openDay": "2026-11-16 09:00-19:00" }
+```
+
+New-build units also carry `developmentTitle` and `developmentUrl`, the name of the project the flat belongs to and a link to its Otodom development page, so you can see the rest of the scheme from one row. A two-room 42.71 m² flat in Warsaw's Mokotów listed at 850,869 PLN returns:
+
+```json
+{ "developmentTitle": "Mokopolis", "developmentUrl": "https://www.otodom.pl/pl/inwestycja/mokopolis-ID4ub4w" }
+```
+
+Resale ads and units with no published project leave both keys out.
+
 ## Sample output
 Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](sample.csv)
 
 ```json
 {
-  "id": 68583142,
-  "url": "https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-47m2-2-ogrodki-ID4DLBI",
-  "title": "2-pokojowe mieszkanie 47m2 + 2 ogródki",
-  "priceAmount": 862280,
+  "id": 68654839,
+  "url": "https://www.otodom.pl/pl/oferta/wyjatkowy-apartament-na-mokotowie-ID4E4g7",
+  "title": "Wyjątkowy apartament na – Mokotowie",
+  "priceAmount": 2350,
   "priceCurrency": "PLN",
-  "pricePerM2": 18062,
-  "areaM2": 47.74,
-  "rooms": 2,
+  "pricePerM2": 26.11,
+  "areaM2": 90,
+  "rooms": 3,
   "floor": 0,
-  "totalFloors": 6,
-  "buildYear": 2028,
-  "market": "primary",
+  "totalFloors": 3,
+  "buildYear": 1962,
+  "market": null,
   "advertiserType": "agency",
-  "agencyName": "RONSON DEVELOPMENT",
+  "agencyName": "Manufaktura Nieruchomości",
   "city": "Warszawa",
-  "district": "Bemowo",
-  "street": "Marynin",
+  "district": "Mokotów",
+  "street": "Fryderyka Joliot-Curie 4",
   "region": "mazowieckie",
-  "lat": 52.245304,
-  "lng": 20.927654,
+  "lat": 52.200806,
+  "lng": 21.040167,
   "imagesCount": 7,
   "propertyType": "flat",
-  "dealType": "sale",
-  "createdAt": "2026-10-30T13:48:31Z",
-  "modifiedAt": "2026-11-18T22:40:09Z",
-  "daysOnMarket": 19,
-  "priceFormatted": "862 280 PLN",
-  "pricePerM2Formatted": "18 062 PLN/m²",
-  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/ronson-development-ID10556616",
-  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlibG9vMndvdmpuZTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.48ytLIGjWPSgEIhyft2Rksq9HsCq-UXKf1gHfiFGzvg/image;s=2048x1536;q=80",
+  "dealType": "rent",
+  "createdAt": "2026-11-19T22:54:46Z",
+  "modifiedAt": "2026-11-19T22:54:46Z",
+  "daysOnMarket": 0,
+  "priceFormatted": "2 350 PLN",
+  "pricePerM2Formatted": "26,11 PLN/m²",
+  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/manufaktura-nieruchomosci-ID10897542",
+  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdiZjJyNW5weGN5dTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.MTAZne2FhfrPhQ3zu6ockEUTM-XJeNPtofubfQzbNjk/image",
   "amenities": [
-    "garden",
-    "terrace",
-    "parking",
+    "balcony",
+    "basement",
+    "secure building",
     "ground floor"
   ],
   "isPromoted": false,
   "isExclusiveOffer": false,
   "isPremium": false,
   "priceOnRequest": false,
-  "subdistrict": "Górce",
+  "subdistrict": "Sielce",
+  "monthlyCharges": 640,
+  "deposit": 3400,
   "features": [
-    "garage",
-    "terrace",
-    "garden"
+    "balcony",
+    "basement",
+    "furniture",
+    "fridge",
+    "oven",
+    "dishwasher",
+    "stove",
+    "monitoring",
+    "entryphone"
   ],
   "photos": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlibG9vMndvdmpuZTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.48ytLIGjWPSgEIhyft2Rksq9HsCq-UXKf1gHfiFGzvg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcyM3QxOW14OTR1dC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x3JPJesfaIC1mcZS4vdP38_kZiZhV9PiTPS97IR4daM/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZjNDVob2F3dGpjMzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jSWy57bMQlNnS5yOsal4Jx7EGrQlHG-Ys6jQXxaQ1Sg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjQ3NnFmcDZ2czR2ci1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x6t9901DvPdqym-8hiWHoWllGWKhaaz3DeY0DvbALH8/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1mOWxnYnk1dmp0cDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.GyFiTLjGsoKZwJp_2ldDVoyLUO_gBnfzV-pPOIt3JDg/image;s=2048x1536;q=80",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InozNzRuMWozODZpeDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.q-5IeMzB8xMkc9Ob1ky-1oTY_4n7rY6vO9dvp_Ywm4s/image;s=2048x1536;q=80"
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdiZjJyNW5weGN5dTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.MTAZne2FhfrPhQ3zu6ockEUTM-XJeNPtofubfQzbNjk/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InltdDZxa25pOWQzOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.gMh1WZzNomy7zAV1GxVeq5qCoaBXzUMR5EUKCQNtVUA/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlkZTN5aTl2MTllaDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jvg3Wf8z3fXtY2S7iNa1DRkepl67WjExoZq4DSWNljw/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZzamZkaXY4Nzd0MDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YdBmMqMwOnay4nhRb6rFlvRc2AnZfziGy130SjTAKWY/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJ6cjFzNDhrNWMxbC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.fGdAwYh7Tzk2Sc2IzW6v1Jmbi81yj5LYh6cL5rcS2p8/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBjM2Fpb2JnZWdkNTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.t_7RPrUGPqV2vB0_1q8nWraBEDayEtmsuVusPz7O1Fo/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imc5aWhubmZhNmRxbzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.i02gb-iOTDRVB-Vdixlyukiqv6yWxCGtA5XaSIt-d0c/image"
   ],
-  "floorPlans": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcyM3QxOW14OTR1dC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.x3JPJesfaIC1mcZS4vdP38_kZiZhV9PiTPS97IR4daM/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZjNDVob2F3dGpjMzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jSWy57bMQlNnS5yOsal4Jx7EGrQlHG-Ys6jQXxaQ1Sg/image"
-  ],
-  "description": "2-pokojowe mieszkanie numer B56 na parterze w Inwestycji Halo Bemowo Dewelopera RONSON DEVELOPMENT\nTeren spacerowy Polana (1 minuta pieszo)\nPrzystanek tramwajowy (5 minut pieszo)\nPark im. Księcia Janusza (15 minut pieszo)\nRynek Bazar na Kole (20 minut pieszo)\nCH Wola Park (8 minut samochodem)\nHalo Bemowo - poznaj inwestycję\nHalo Bemowo to nowa inwestycja mieszkaniowa grupy RONSON Development, realizowana przy ul. Marynin w warszawskiej dzielnicy Bemowo.\nHalo Bemowo – to propozycja dla osób, które chcą mieszkać w spokojnej okolicy, a jednocześnie pozostać blisko miasta. Zróżnicowana oferta mieszkań odpowie na potrzeby rodzin, singli i par.\nAtutem lokalizacji jest wygodny dostęp do komunikacji miejskiej oraz szybki dojazd do centrum Warszawy dzięki bliskości linii tramwajowej oraz niedalekiej odległości od stacji Metra.\nW pobliżu znajdują się tereny rekreacyjne, szkoły, przedszkola oraz Wola Park.\nMieszkania od 36 m2\nBalkony i tarasy z widokiem na zieleń\nInfrastruktura rowerowa\nNowoczesne elewacje i dopracowane detale\nPodziemny parking   i komórki lokatorskie\nHalo Bemowo - lokalizacja\nBemowo, ul. Marynin\n6,0 km do centrum\n6 min. spacerem do przystanku autobusowego\n6 min. spacerem do przystanku tramwajowego\n8 min. samochodem do stacji metra\ndojazd do centrum: 19 min samochodem\nIstotne punkty w okolicy inwestycji Przystanek autobusowy (414 m, 6 minut spacerem)\nPrzystanek tramwajowy (430 m, 6 minut spacerem)",
+  "description": "Na wynajem duża kawalerka na Mokotowie\n.\nRozkład mieszkania:\nprzestronny salon z dużymi oknami\nw pełni wyposażona kuchnia\nłazienka\nfunkcjonalny przedpokój\nWykończenie i wyposażenie:\nWnętrza urządzone z dbałością o każdy detal. Naturalne drewno, wysokiej klasy ceramika, granit, nowoczesne oświetlenie i zabudowy na wymiar. Kuchnia z pełnym AGD, łazienki elegancko wykończone, w jednej znajduje się również wanna.\nKoszty:\nNajem 2350 PLN\nCzynsz administracyjny 680 PLN\nMedia 180 PLN\nSUMA 3170 PLN\nKaucja 3490 PLN\nAgencja pobiera prowizję\nZapraszam do kontaktu:\n[contact removed]\nOferta wysłana z programu dla biur nieruchomości ASARI CRM ()",
   "elevator": false,
-  "availableFrom": "2028-10-16",
-  "ownership": "full_ownership",
-  "constructionStatus": "to_completion",
-  "scrapedAt": "2026-11-18T23:03:40Z"
+  "availableFrom": "2026-11-03",
+  "heating": "urban",
+  "buildingType": "apartment",
+  "buildingMaterial": "other",
+  "windowsType": "wooden",
+  "constructionStatus": "ready_to_use",
+  "scrapedAt": "2026-11-19T23:50:28Z",
+  "changeType": "new",
+  "priceHistory": [
+    {
+      "priceAmount": 2350,
+      "priceCurrency": "PLN",
+      "pricePerM2": 26.11,
+      "observedAt": "2026-11-19T23:50:28Z"
+    }
+  ],
+  "priceDirection": "new",
+  "priceChangePct": null
 }
 ```
 
