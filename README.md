@@ -16,7 +16,7 @@ Flats for sale across Poland, from the default input on 15 November 2026:
 | Apartament premium w kamienicy z windą | 1,069,000 | 18,630 | 57.38 | 2 | 2024 | Wrocław | Stare Miasto | resale |
 | 4 niezależne pokoje, Stare Miasto | 1,231,000 | 21,982 | 56 | 4 | 1968 | Kraków | Stare Miasto | resale |
 
-The Output tab opens on a Listings table of the main listing fields. A second Market & price history table groups `market`, `pricePerM2` and `priceChangePct` — Otodom publishes the market and the price change for only some ads, and price change appears after a repeat monitor run — so the first table does not open on columns that are empty for most ads. A third New builds table groups `developmentTitle` and `developmentUrl`, which only ads in a published project carry.
+The Output tab opens on a Listings table of the main listing fields, with the province (voivodeship) next to the city, so a nationwide export is already grouped by region. A second Market & price history table groups `market`, `pricePerM2` and `priceChangePct` — Otodom publishes the market and the price change for only some ads, and price change appears after a repeat monitor run — so the first table does not open on columns that are empty for most ads. A third New builds table groups `developmentTitle` and `developmentUrl`, which only ads in a published project carry.
 
 Otodom leaves the per-m² price off rental cards. The scraper works it out from the advertised price and the area, so renters get the same comparison column as buyers: the Żabiniec flat below, 2,600 PLN a month for 40 m², returns `"pricePerM2": 65` and `"pricePerM2Formatted": "65 PLN/m²"`.
 
@@ -39,6 +39,14 @@ Some sellers hide the asking price on Otodom ("Zapytaj o cenę"). Those ads carr
 ```
 
 Each row also carries the floor and the building's total floors, monthly charges (czynsz), heating, building type and material, ownership type, elevator, energy certificate, available-from date, the street, GPS coordinates, the agency name, the listing and update dates, the description and the photos. Listings also carry `daysOnMarket`, the whole number of days since the ad was first posted, so you can tell a stale listing from a fresh one at a glance.
+
+Every row carries `province`, the voivodeship (województwo) Otodom publishes with the address — the column other Otodom exports call Province — so you can group a nationwide export by region or line the rows up with another Polish property dataset. It comes from Otodom's own location data on search cards and offer pages, so fast runs carry it too; a listing with no published province leaves the key out. A search across all Poland returns:
+
+```json
+{ "city": "Kraków", "province": "małopolskie" }
+```
+
+A Gdańsk studio in the same run returns `"province": "pomorskie"`.
 
 Location goes down to the neighbourhood as well: `subdistrict` names the area inside the district, the name buyers actually search for. A Żabiniec rental in Kraków sits in Prądnik Biały district and returns:
 
@@ -73,6 +81,12 @@ Every search row also carries `amenities`, a plain list of the features Otodom s
 ```
 
 An Ursus flat for sale lists `"amenities": ["separate kitchen", "basement", "secure building"]`.
+
+Detail-enriched rows also carry `media`, the utilities the advertiser publishes on the offer page — internet, cable television and phone in a flat, plus water, electricity and sewage on a house — so you can tell a wired home before arranging a viewing. It is read from the offer page, so fast runs with full details off leave it out, and a listing with no published utilities leaves the key out. The Ursus flat returns:
+
+```json
+{ "media": ["internet", "cable television", "phone"] }
+```
 
 Buyers who need parking can read `parkingType` without opening each ad: `garage` when Otodom lists a garage, `parking` for a parking spot. It comes from the listing card, so fast runs with full details off still carry it, and a listing with no published parking leaves the key out. The Kraków flat below, 940,000 PLN for 54 m² in Łagiewniki-Borek Fałęcki, returns:
 
@@ -114,94 +128,107 @@ New-build units also carry `developmentTitle` and `developmentUrl`, the name of 
 
 Resale ads and units with no published project leave both keys out.
 
+Set `includeDevelopments: true` to also return the new-build projects Otodom mixes into sale searches, instead of dropping them. Each project becomes one row with its unit count, starting price per m², area and rooms ranges, delivery quarter and build state, so you can compare whole schemes rather than single units:
+
+```json
+{
+  "title": "Osiedle Metr Kwadrat",
+  "city": "Wrocław",
+  "unitsNumber": 69,
+  "pricePerM2": 13500,
+  "pricePerM2Formatted": "13 500 PLN/m²",
+  "areaMinM2": 34.1,
+  "areaMaxM2": 56,
+  "roomsMin": 2,
+  "roomsMax": 4,
+  "estimatedDelivery": "2026-Q1",
+  "investmentState": "in building",
+  "agencyName": "INKOM",
+  "url": "https://www.otodom.pl/pl/investment/osiedle-metr-kwadrat-ID4za7N"
+}
+```
+
+Project rows carry `propertyType: "development"` and no `priceAmount`, because the scheme publishes a per-m² price rather than one asking price; the Output tab opens a New-build projects table for them.
+
 ## Sample output
 Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](sample.csv)
 
 ```json
 {
-  "id": 68654839,
-  "url": "https://www.otodom.pl/pl/oferta/wyjatkowy-apartament-na-mokotowie-ID4E4g7",
-  "title": "Wyjątkowy apartament na – Mokotowie",
-  "priceAmount": 2350,
+  "id": 68637001,
+  "url": "https://www.otodom.pl/pl/oferta/hit-duza-kawalerka-z-duzym-zielonym-ogrodem-ponad-60-m-ogrodu-ID4DZCp",
+  "title": "HIT! Duża kawalerka z dużym zielonym ogrodem! | Ponad 60 m² ogrodu",
+  "priceAmount": 584204.06,
   "priceCurrency": "PLN",
-  "pricePerM2": 26.11,
-  "areaM2": 90,
-  "rooms": 3,
+  "pricePerM2": 18599.3,
+  "areaM2": 31.41,
+  "rooms": 1,
   "floor": 0,
-  "totalFloors": 3,
-  "buildYear": 1962,
-  "market": null,
+  "totalFloors": 5,
+  "buildYear": null,
+  "market": "primary",
   "advertiserType": "agency",
-  "agencyName": "Manufaktura Nieruchomości",
+  "agencyName": "AS Nieruchomości i Finanse",
   "city": "Warszawa",
-  "district": "Mokotów",
-  "street": "Fryderyka Joliot-Curie 4",
+  "district": "Praga-Południe",
+  "street": "Żupnicza",
   "region": "mazowieckie",
-  "lat": 52.200806,
-  "lng": 21.040167,
-  "imagesCount": 7,
+  "lat": 52.251347,
+  "lng": 21.062424,
+  "imagesCount": 6,
   "propertyType": "flat",
-  "dealType": "rent",
-  "createdAt": "2026-11-19T22:54:46Z",
-  "modifiedAt": "2026-11-19T22:54:46Z",
-  "daysOnMarket": 0,
-  "priceFormatted": "2 350 PLN",
-  "pricePerM2Formatted": "26,11 PLN/m²",
-  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/manufaktura-nieruchomosci-ID10897542",
-  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdiZjJyNW5weGN5dTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.MTAZne2FhfrPhQ3zu6ockEUTM-XJeNPtofubfQzbNjk/image",
+  "dealType": "sale",
+  "createdAt": "2026-11-16T08:32:41Z",
+  "modifiedAt": "2026-11-16T08:32:41Z",
+  "daysOnMarket": 4,
+  "priceFormatted": "584 204,06 PLN",
+  "pricePerM2Formatted": "18 599,3 PLN/m²",
+  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/as-nieruchomosci-i-finanse-ID10869110",
+  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1ydGJhZ2tnb3pydzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.J9aiYVneClX-TOhhQyA-HE_8RiAD1NrAomv4j6hCF9I/image",
   "amenities": [
-    "balcony",
-    "basement",
+    "garden",
+    "terrace",
+    "parking",
     "secure building",
     "ground floor"
   ],
+  "parkingType": "garage",
   "isPromoted": false,
   "isExclusiveOffer": false,
   "isPremium": false,
   "priceOnRequest": false,
-  "subdistrict": "Sielce",
-  "monthlyCharges": 640,
-  "deposit": 3400,
+  "subdistrict": "Kamionek",
+  "province": "mazowieckie",
+  "monthlyCharges": 400,
   "features": [
-    "balcony",
-    "basement",
-    "furniture",
-    "fridge",
-    "oven",
-    "dishwasher",
-    "stove",
-    "monitoring",
-    "entryphone"
+    "garage",
+    "garden",
+    "terrace",
+    "lift",
+    "anti_burglary_door",
+    "entryphone",
+    "monitoring"
   ],
   "photos": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdiZjJyNW5weGN5dTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.MTAZne2FhfrPhQ3zu6ockEUTM-XJeNPtofubfQzbNjk/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InltdDZxa25pOWQzOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.gMh1WZzNomy7zAV1GxVeq5qCoaBXzUMR5EUKCQNtVUA/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjlkZTN5aTl2MTllaDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jvg3Wf8z3fXtY2S7iNa1DRkepl67WjExoZq4DSWNljw/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZzamZkaXY4Nzd0MDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.YdBmMqMwOnay4nhRb6rFlvRc2AnZfziGy130SjTAKWY/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJ6cjFzNDhrNWMxbC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.fGdAwYh7Tzk2Sc2IzW6v1Jmbi81yj5LYh6cL5rcS2p8/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBjM2Fpb2JnZWdkNTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.t_7RPrUGPqV2vB0_1q8nWraBEDayEtmsuVusPz7O1Fo/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imc5aWhubmZhNmRxbzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.i02gb-iOTDRVB-Vdixlyukiqv6yWxCGtA5XaSIt-d0c/image"
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1ydGJhZ2tnb3pydzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.J9aiYVneClX-TOhhQyA-HE_8RiAD1NrAomv4j6hCF9I/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBzM3d5OGhkdG1scjEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.SxP2TOUr0KwxbgdRh89GcWc2mzhBxN9-0Leksttbah4/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImxsdWhrZ3JhM2VubS1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UV3JumN4RRGlNURP-e7nK8fqle-OkuUsRgma9KBg8jo/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImRmMXZlanZqNXQzMzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Oh1cwKtfP3IikqgeR9Ilif1M-gUbWOSuh1AsWKz2TvI/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImJkNDdybGFtbndtZzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5N183f7A7nqhST34O6sr_0G3UP3cBv2AAndV6czWTN8/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNmNzFqcm84OGVrMDMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.__pMy2Bj5-H1mfxaZJi44ZjBLj5lRg5TAeEplTvq8XI/image"
   ],
-  "description": "Na wynajem duża kawalerka na Mokotowie\n.\nRozkład mieszkania:\nprzestronny salon z dużymi oknami\nw pełni wyposażona kuchnia\nłazienka\nfunkcjonalny przedpokój\nWykończenie i wyposażenie:\nWnętrza urządzone z dbałością o każdy detal. Naturalne drewno, wysokiej klasy ceramika, granit, nowoczesne oświetlenie i zabudowy na wymiar. Kuchnia z pełnym AGD, łazienki elegancko wykończone, w jednej znajduje się również wanna.\nKoszty:\nNajem 2350 PLN\nCzynsz administracyjny 680 PLN\nMedia 180 PLN\nSUMA 3170 PLN\nKaucja 3490 PLN\nAgencja pobiera prowizję\nZapraszam do kontaktu:\n[contact removed]\nOferta wysłana z programu dla biur nieruchomości ASARI CRM ()",
-  "elevator": false,
-  "availableFrom": "2026-11-03",
+  "floorPlans": [
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBzM3d5OGhkdG1scjEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.SxP2TOUr0KwxbgdRh89GcWc2mzhBxN9-0Leksttbah4/image"
+  ],
+  "description": "Fantastyczna Lokalizacja - dobra komunikacja ! :)\nPoznaj mieszkanie, które zachwyca od pierwszego wejrzenia. Jasne, przestronne, idealnie zaprojektowane – stworzone z myślą o komforcie codziennego życia.\nTo doskonałe miejsce dla tych, którzy cenią nowoczesność, funkcjonalność i dobrą energię we wnętrzach. Tu wszystko ma swoje miejsce, a każdy detal ma znaczenie.\nZobacz, zakochaj się i zamieszkaj!\nLokalizacja: Praga Południe - Kamionek:\n• Bliskość planowanej stacji II linii metra\n• W sąsiedztwie liczne sklepy , punkty usługowe, restauracje i kawiarnie\n• Dobra komunikacja miejska – autobusy i tramwaje w bezpośrednim zasięgu\n• W pobliżu stacja PKP Warszawa Wschodnia\n• Tereny zielone i parki – m.in. Park Skaryszewski i Kamionkowskie Błonia Elekcyjne\n• Łatwy dojazd do centrum miasta i innych dzielnic\n• Bliskość uczelni (np. SWPS) i obiektów sportowych\n• Dynamicznie rozwijająca się część Pragi z dużym potencjałem inwestycyjnym\nSpecjalnie dla Ciebie:\nMOŻLIWOŚĆ NEGOCJACJI HARMONOGRAMU\nMiejsce postojowe w SUPER CENIE - PROMOCJA DO KOŃCA MIESIĄCA\nZamieszkaj w miejscu, które daje więcej niż tylko dach nad głową – to przestrzeń do życia, relaksu i rozwoju.\nZadzwoń i umów się na prezentację!\nMieszkanie od dewelopera- w ofercie cała inwestycja/ różne metraże\n0% prowizji | 0% podatku PCC | zakup bezpośrednio od dewelopera\nZe mną uzyskujesz najlepsze warunki na rynku!\n- Możliwość wykończenia \"pod klucz\"\n- Darmowa pomoc rzetelnego doradcy kredytowego\n- Pomagam przejść przez cały proces – od wyboru po zakup\nZdjęcia w ogłoszeniu to wizualizacje o charakterze poglądowym. Nie stanowią oferty handlowej w rozumieniu art. 66 § 1 Kodeksu cywilnego.",
+  "elevator": true,
   "heating": "urban",
   "buildingType": "apartment",
   "buildingMaterial": "other",
   "windowsType": "wooden",
-  "constructionStatus": "ready_to_use",
-  "scrapedAt": "2026-11-19T23:50:28Z",
-  "changeType": "new",
-  "priceHistory": [
-    {
-      "priceAmount": 2350,
-      "priceCurrency": "PLN",
-      "pricePerM2": 26.11,
-      "observedAt": "2026-11-19T23:50:28Z"
-    }
-  ],
-  "priceDirection": "new",
-  "priceChangePct": null
+  "ownership": "full_ownership",
+  "constructionStatus": "to_completion",
+  "scrapedAt": "2026-11-20T23:58:36Z"
 }
 ```
 
