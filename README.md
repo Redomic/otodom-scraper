@@ -38,7 +38,7 @@ Some sellers hide the asking price on Otodom ("Zapytaj o cenę"). Those ads carr
 }
 ```
 
-Each row also carries the floor and the building's total floors, monthly charges (czynsz), heating, building type and material, ownership type, elevator, energy certificate, available-from date, the street, GPS coordinates, the agency name, the listing and update dates, the description and the photos. Listings also carry `daysOnMarket`, the whole number of days since the ad was first posted, so you can tell a stale listing from a fresh one at a glance.
+Each row also carries the floor and the building's total floors, monthly charges (czynsz), heating, building type and material, ownership type, elevator, energy certificate, available-from date, the street, GPS coordinates, the agency name, the listing and update dates, the description and the photos. Listings also carry `daysOnMarket`, the whole number of days since the ad was first posted, so you can tell a stale listing from a fresh one at a glance. Every row also carries `asOf`, the exact moment the Actor observed it, so you can prove how current a row is even months after export — including rows in monitor mode.
 
 Detail-enriched rows also carry `condition`, the finishing state the advertiser publishes, so you can spot a home you can move straight into without opening each ad. The Ursus flat returns:
 
@@ -95,6 +95,8 @@ Houses and plots carry `plotArea`, the size of the land in square metres, so you
 Listings posted by an agency or developer include `agencyUrl`, the public agency profile on Otodom, so you can open the seller's other listings in one click. The example Ursus flat points to `https://www.otodom.pl/pl/firmy/biura-nieruchomosci/property-in-ID7988985`; private owners have no agency page and leave the field out.
 
 Those rows also carry `agencyLicenseNumber`, the business licence Otodom publishes on the agency's profile, so you can check who is selling before you call. The Ursus agency's licence is 27548; private ads leave the field out.
+
+Agency rows also include `agencyId`, Otodom's own number for the agency or developer, so you can group or join listings from the same seller across exports. The Ursus flat returns `"agencyId": 7988985`; private ads leave the field out.
 
 Every listing carries `coverPhoto`, one direct link to its main photo, so you can put a thumbnail in a spreadsheet without unpacking the full `photos` list. It comes from the search card itself, so even fast runs with full details off return it, and it matches the first photo when details are on. The Żabiniec rental above returns:
 
@@ -205,91 +207,99 @@ Real rows from a recent run: [`sample.json`](sample.json) · [`sample.csv`](samp
 
 ```json
 {
-  "id": 68608777,
-  "url": "https://www.otodom.pl/pl/oferta/garderoba-balkon-z-widokiem-na-park-klimatyzacja-osobna-toaleta-ID4DShb",
-  "title": "Garderoba | Balkon z widokiem na park | Klimatyzacja| Osobna toaleta",
-  "priceAmount": 848000,
+  "id": 68559126,
+  "url": "https://www.otodom.pl/pl/oferta/stegny-2-pok-43-8-m-9-pietro-widok-ID4DFmm",
+  "title": "Stegny, 2 pok. 43,8 m², 9 piętro, widok",
+  "priceAmount": 660000,
   "priceCurrency": "PLN",
-  "pricePerM2": 13721.68,
-  "areaM2": 61.8,
-  "rooms": 3,
-  "floor": 3,
-  "totalFloors": 3,
-  "buildYear": 1982,
+  "pricePerM2": 15068.49,
+  "areaM2": 43.8,
+  "rooms": 2,
+  "floor": 9,
+  "totalFloors": 15,
+  "buildYear": 1978,
   "market": "secondary",
   "advertiserType": "agency",
-  "agencyName": "Open Estate Nieruchomości",
+  "agencyName": "Wilsons Nieruchomości Sp. z o.o.",
   "city": "Warszawa",
-  "district": "Praga-Południe",
-  "street": "21 Pułku Piechoty Dzieci Warszawy",
+  "district": "Mokotów",
+  "street": "Iberyjska",
   "region": "mazowieckie",
-  "lat": 52.222904,
-  "lng": 21.081621,
-  "imagesCount": 17,
+  "lat": 52.178513,
+  "lng": 21.05715,
+  "imagesCount": 18,
   "propertyType": "flat",
   "dealType": "sale",
-  "createdAt": "2026-11-06T13:49:32Z",
-  "modifiedAt": "2026-11-06T13:49:32Z",
-  "daysOnMarket": 15,
-  "rentPrice": 1390,
-  "priceFormatted": "848 000 PLN",
-  "pricePerM2Formatted": "13 721,68 PLN/m²",
-  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/open-estate-nieruchomosci-ID10293798",
-  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNqczM3ZHhyaW9ldzItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.By-WLTlv3WtIN-Fv-NkwDtBklBXXLB-az3LgG2EJwZU/image",
+  "createdAt": "2026-10-23T12:23:27Z",
+  "modifiedAt": "2026-11-22T20:20:01Z",
+  "daysOnMarket": 30,
+  "rentPrice": 507,
+  "priceFormatted": "660 000 PLN",
+  "pricePerM2Formatted": "15 068,49 PLN/m²",
+  "agencyUrl": "https://www.otodom.pl/pl/firmy/biura-nieruchomosci/wilsons-nieruchomosci-sp-z-o-o-ID3767159",
+  "agencyId": 3767159,
+  "coverPhoto": "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcweTVxNG9nNTY3azItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Hzb9ykH5XX5HiMfzgBRNc2sQ-L8ak5sv8KzI5nOtXfA/image",
   "amenities": [
     "separate kitchen",
     "balcony",
-    "basement",
-    "top floor"
+    "storage room"
   ],
   "isPromoted": false,
   "isExclusiveOffer": false,
   "isPremium": false,
   "priceOnRequest": false,
-  "subdistrict": "Gocław",
+  "subdistrict": "Stegny",
   "province": "mazowieckie",
-  "displayAddress": "21 Pułku Piechoty Dzieci Warszawy, Gocław, Praga-Południe, Warszawa, mazowieckie",
-  "monthlyCharges": 1390,
-  "agencyLicenseNumber": "23917",
+  "displayAddress": "Iberyjska, Stegny, Mokotów, Warszawa, mazowieckie",
+  "monthlyCharges": 507,
+  "agencyLicenseNumber": "12165",
   "condition": "do zamieszkania",
   "features": [
+    "lift",
     "balcony",
-    "basement",
     "separate_kitchen",
-    "furniture",
-    "fridge",
-    "oven",
-    "dishwasher",
+    "usable_room",
     "entryphone"
   ],
-  "photos": [
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNqczM3ZHhyaW9ldzItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.By-WLTlv3WtIN-Fv-NkwDtBklBXXLB-az3LgG2EJwZU/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InhjejY5ZWpjMjUxMjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ycqot-sm6xRSMlG_ktJ7--2x0pBVqEX4M1E5cb_bxu0/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNxNjlldnhrZWVobzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.pS3KqcTJB4foYvTFA3QMdXLmgTaDj5R1Sa2q0LqTdSY/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InYwMDl4eWp3OHF6bjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.DcDqGrigjqyFE0DTTmikxEUP91YX2jEmvb4GOSTl_Ko/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcwY2V6MG5hd2k1cDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.K7KY1yRJYwRY6__339hbPczYUbOJQ67H0apVQj-lNig/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA5amQwNXZva2dxeTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.898LDy3Ngwicimhk0OimL2BEdy28d8QXhtONpWALVDc/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9yZTFoYzNibG5ybjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.G4WXqR9N0YWR5ABVptRyzf_dw_wQHAIYHveZXjRxO0M/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ink0MDloMDdodGU0ZjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.jHzZkHy649Zku6eH1R5mjtagnDfR8M-MJCr4tJUPfTs/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjN3YWV2dWY4MDB0cjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UXvfsnhGXktg7txETiTZhzX7qBt5LciYBKQymKYHNKw/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InNub3pybm55a2dyYjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UrGDaEnKXf53Rj3hOxwJf-BTRQjkmN3OUhzCofgOTUs/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InVhOG02OHU1dG93YjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.fr4v9a62eobokeJTLo4CJIAYt37H53hS-V3iLmwKHqU/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1iMmoxd2pkZzMweDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.1dWhh_87-Uyl3xbEySWPPLUmSn2Jnk8hLSQOSJ6Z_uk/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImI2b3FwcDh3dXYzazItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0lTi7HtBHNKQoC2Kf7QJHG7HsilouxBuYkohSqEDBpg/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjU3czl0MW12NW5yZTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.iYPWvvDFZMwx31jdqnbiWff4VPPKwiykTeT1Z13sHlA/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImdydmU2cm96eGVycy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.BQ8SArJVOL2l2r6fCYCKApWSqRYmPaKYLVmNfYdsa1o/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjVoYmlyYThwb3dmdzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.a0xo40uaw1BAmeLLcBvLhYHCJXr_khp15Qpq-80SWNA/image",
-    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBqd2I4aDRsc2lidjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.r2hZ3vDvUFSVx-C6GB_oF7V59K69ZVCwTa2znlyfO9k/image"
+  "media": [
+    "internet",
+    "cable television"
   ],
-  "description": "Na sprzedaż mieszkanie o powierzchni 61,8 m², położone przy ul. 21 Pułku Piechoty Dzieci Warszawy na warszawskim Gocławiu, w dzielnicy Praga-Południe. Mieszkanie znajduje się na 3. piętrze niskiego, 3-piętrowego budynku z wielkiej płyty, wybudowanego w 1982 roku. Budynek nie posiada windy.\nLokal składa się z trzech pokoi, oddzielnej kuchni, łazienki oraz osobnej toalety. Ma bardzo dobry, funkcjonalny rozkład, który pozwala wygodnie wykorzystać całą powierzchnię. Mieszkanie jest dwustronne, z ekspozycją wschód–zachód. Z balkonu rozpościera się widok na zieleń i park.\nMieszkanie wymaga remontu lub odświeżenia, w zależności od oczekiwań przyszłego właściciela. W lokalu znajduje się klimatyzacja, a do mieszkania przynależy również piwnica.\nStan techniczny i wyposażenie:\nMieszkanie jest w stanie do remontu/ drobnego remontu. Na podłogach znajduje się deska oraz wykładzina, okna są wykonane z PCV. W lokalu zamontowana jest klimatyzacja.\nOgrzewanie pochodzi z miejskiej instalacji centralnego ogrzewania, a woda dostarczana jest z wodociągu miejskiego. Miesięczny czynsz administracyjny wynosi około 1390 zł.\nUkład mieszkania:\nPowierzchnia 61,8 m² obejmuje trzy pokoje, oddzielną kuchnię, garderobę, łazienkę i osobną toaletę.\nOddzielna kuchnia zapewnia niezależną przestrzeń do przygotowywania posiłków, a osobna toaleta jest wygodnym rozwiązaniem przy większej liczbie domowników.\nMieszkanie jest dwustronne, z oknami skierowanymi na wschód i zachód. Dzięki temu wnętrza są doświetlone o różnych porach dnia. Z balkonu widok rozpościera się na zieleń i pobliski park.\nBudynek i dodatkowe informacje:\nBudynek został wybudowany w 1982 roku i ma trzy kondygnacje mieszkalne. Jest to niska zabudowa z wielkiej płyty.\nDo mieszkania przynależy piwnica, która zapewnia dodatkowe miejsce do przechowywania.\nNieruchomość stanowi spółdzielcze własnościowe prawo do lokalu.\nLokalizacja – Gocław, Praga-Południe:\nGocław to jedna z najbardziej rozwiniętych pod względem infrastruktury części Pragi-Południe. W najbliższej okolicy znajdują się sklepy, punkty usługowe, restauracje, placówki edukacyjne i przychodnie. Większość codziennych spraw można załatwić bez konieczności wyjeżdżania z osiedla.\nW pobliżu znajduje się Centrum Handlowe Gocław przy ul. gen. Augusta Emila Fieldorfa „Nila”, gdzie dostępne są sklepy i punkty usługowe. Nieco dalej położona jest Promenada, jedno z większych centrów handlowych na prawym brzegu Wisły, z szeroką ofertą sklepów, restauracji, kina i usług.\nGocław jest dobrze skomunikowany z pozostałymi częściami Warszawy. W okolicy znajdują się przystanki autobusowe, m.in. Os. Jantar i Algierska, z których można dojechać w kierunku innych części Pragi-Południe, centrum miasta oraz stacji metra.\nDojazd samochodem ułatwia bliskość głównych ulic dzielnicy, w tym ul. gen. Augusta Emila Fieldorfa „Nila”, Ostrobramskiej i al. Stanów Zjednoczonych.\nW okolicy nie brakuje również terenów zielonych. W pobliżu znajduje się Park nad Balatonem, z jeziorkiem, alejkami spacerowymi i miejscami do odpoczynku. To popularne miejsce spacerów i rekreacji mieszkańców Gocławia. W dalszej okolicy dostępne są również inne tereny zielone Pragi-Południe.\nGocław jest chętnie wybierany przez rodziny ze względu na rozwiniętą infrastrukturę osiedlową, dużą liczbę szkół, przedszkoli, sklepów i punktów usługowych. Jednocześnie jest to część Warszawy, w której wciąż można znaleźć spokojniejsze osiedla mieszkaniowe, z dala od ścisłego centrum miasta.\nW zasięgu najbliższej okolicy:\n- przystanki autobusowe – Os. Jantar i Algierska,\n- Centrum Handlowe Gocław – w pobliżu,\n- Centrum Handlowe Promenada – kilka minut samochodem,\n- Park nad Balatonem – w okolicy,\n- sklepy spożywcze, restauracje i punkty usługowe – w najbliższym sąsiedztwie,\n- szkoły i przedszkola – na terenie Gocławia.\nPodsumowanie:\n- 61,8 m², 3 pokoje\n- oddzielna kuchnia, łazienka i osobna toaleta\n- bardzo dobry, funkcjonalny rozkład\n- dwustronne mieszkanie, ekspozycja wschód–zachód\n- balkon z widokiem na zieleń i park\n- garderoba\n- klimatyzacja\n- piwnica\n- budynek z 1982 roku, wielka płyta\n- spółdzielcze własnościowe prawo do lokalu\n- czynsz administracyjny około 1390 zł\n- mieszkanie do remontu lub odświeżenia",
-  "elevator": false,
+  "photos": [
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcweTVxNG9nNTY3azItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Hzb9ykH5XX5HiMfzgBRNc2sQ-L8ak5sv8KzI5nOtXfA/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBpdW85amtsYmtsaTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5LrpPwLpECrtfY59UIkdgby7Hdi9Y2ddps2C96YBEaQ/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImdmNDR6ZnJlZnQ3ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.KGQNc0W3g9UMAJaAHS8bPjVGrDmA1p3ktfUOB4PHu70/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InByN2U2NWw2dWs4ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.uJ6Z6i90MNtA-n5ZuO0FgFid4EI5RhedXHc9GsC8PdY/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijh4enhodHY5Zm82eTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OR8lUp9UOoer4smLLQcUBCLtH4jY1yWkHTdAiU9fJDY/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1saHc5eGp4azBxeDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.DX3oJ2KZXNrQaU-kLCJYdXBgZUVRZMYnuCFi0dksX18/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img1bGtnNDkxdzRsdy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.KsZIwciP3KYTXmxhNswgmfx3htL0xucKycTUYO_U6uc/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZ2bnJoMDE2eW94YjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0._1OaQbtzqvuM8GD4lKVf2NJqdLWSs7kQBE6HDPCmKcc/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNqeGwwdjlwd2ZudTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.QOybyDBJP3Ha1KxmORhyRX_GHxe2IJ3tR3a68w66JaM/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdkMGdtZXBvdG5qbS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.y7C2BGWPXWWcpIhruc8iZm1e_WrBNuUW9BjB20mUP7g/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImF1eWxnMnMwY2hqbzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.3_RrsBpIlxQ-6MzRSA7GlDVwrkuZADhS_kZUdyOphWM/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inl2cnh3MXVkZ3VuajItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0._4wy_XcYRwyGAFHyCI_E5P5XwsAOtcjjOpIlaIZiu8c/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeThoZzBmam94ZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.V3WZM-f4Y3zE_yBUSBtEquZVKmiqKZi_vg-7ZyeyVIE/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjgyYzY1ZXFsa2c4dDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.xftHh950beL-DX-pvJP1_yHpcFI7NDM_hgsItvsRDvo/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImE3M3pmMWFsNHI5ZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qlVs-0SMy9afl1meLkguzyZzm6nz29xitYCL--LOVQg/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9mcnVvdzFoeGIzdS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.LYguVLyuB5oZd2i-9H8CW4gsgBWkSNollkpSdV5I-ZM/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVyaWdsNWFiNWYxdDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.FKZm4-gBw37wAbCa5uyMEE0LO6ppL0ugeCfTxNSAhUg/image",
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InUyNzdxb2Jqeno0cS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.CfZrOXnep1G8hKb6E-DRF7XqoGz2OjMyhBApyTFoRX8/image"
+  ],
+  "floorPlans": [
+    "https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img1bGtnNDkxdzRsdy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.KsZIwciP3KYTXmxhNswgmfx3htL0xucKycTUYO_U6uc/image"
+  ],
+  "virtualTour": "https://my.matterport.com/show/?m=NXAgu1pBvUr",
+  "description": "Możliwość uzyskania 3 pokoi/niski czynsz/księga wieczysta/ widok na miasto.\nZapraszam na prezentację mieszkania o powierzchni 43,8 m2 położonego przy ul Iberyjskiej 4 na Warszawskim Mokotowie - osiedle Stegny.\nTo doskonała oferta dla pary, niedużej rodziny lub w celach inwestycyjnych.\nBudynek oddany do użytku w 1978 roku, wyposażony w 2 windy, po wszelkich modernizacjach, administrowany przez SM Energetyka.\nMieszkanie znajduje się na 9 piętrze, dzięki czemu jest ono świetnie doświetlone , widok z okien niczym nie przysłonięty, strona północno- wschodnia. Wysokość mieszkania to 2,6m.\nMieszkanie ma duże możliwości aranżacyjne: można pozostać przy obecnym układzie (2 pokoje i osobna kuchnia) lub utworzyć pokój z aneksem kuchennym uzyskując 2 sypialnie.\nNa obecny układ mieszkania składa się:\n- pokój dzienny ok. 18 m2 plus loggia ok. 3,0 m2,\n- kuchnia ok. 7,0 m2,\n- sypialnia ok. 10 m2,\n- łazienka z wc ok. 3,2 m2\nDodatkową powierzchnię do przechowywania stanowią dwa schowki na korytarzu tuż obok mieszkania oraz wydzielona zamykana część korytarza.\nMieszkanie spółdzielcze własnościowe z założoną księgą wieczystą bez żadnych obciążeń, możliwość kredytowania zakupu.\nZ aletą jest niski czynsz do administracji - 507 zł.\nMieszkanie zostało odświeżone i przygotowane do zamieszkania:\n- parkiet dębowy odnowiony,\n- nowe drzwi Gerda o podniesionej klasie akustycznej,\n- wymieniono wszystkie drzwi wewnętrzne,\n- odświeżono łazienkę oraz instalacje,\n- zamontowano okna PCV.\nW okolicy:\n- liczne tereny rekreacyjne, place zabaw i boiska,\n- liczne punkty handlowo-usługowe min Auchan, Rossmann, Pepco nieco dalej CH Sadyba Best\n- na osiedlu znajdują się 2 szkoły publiczne oraz przedszkola.\n- bardzo dobrze rozwinięta komunikacja miejska, przy ul Sobieskiego znajduje się, kilka linii autobusowych oraz tramwajowych - dojazd do centrum zajmuje ok 20 minut.\nZapraszam na prezentację w dogodnym terminie.\nJeżeli Twój zakup wiąże się ze sprzedażą innej nieruchomości zadzwoń do mnie. Bezpiecznie przeprowadzę cały proces.\nŚwiadczymy naszym klientom usługę bezpłatnej konsultacji eksperta kredytowego oraz pomoc w uzyskaniu kredytu hipotecznego. Serdecznie zapraszam na prezentacje oraz do kontaktu telefonicznego.\nNiniejsza prezentacja oferty nie jest ofertą w rozumieniu Kodeksu Cywilnego i ma charakter wyłącznie informacyjny.",
+  "elevator": true,
+  "availableFrom": "2026-10-31",
   "heating": "urban",
   "buildingType": "block",
   "buildingMaterial": "concrete_plate",
   "windowsType": "plastic",
   "ownership": "limited_ownership",
   "constructionStatus": "ready_to_use",
-  "scrapedAt": "2026-11-22T00:21:55Z"
+  "scrapedAt": "2026-11-22T20:25:37Z",
+  "asOf": "2026-11-22T20:25:37Z"
 }
 ```
 
