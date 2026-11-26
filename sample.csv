@@ -1,112 +1,255 @@
-id,url,title,priceAmount,priceCurrency,pricePerM2,areaM2,rooms,floor,totalFloors,buildYear,market,advertiserType,agencyName,city,district,street,region,lat,lng,imagesCount,propertyType,dealType,createdAt,modifiedAt,daysOnMarket,rentPrice,priceFormatted,pricePerM2Formatted,agencyUrl,agencyId,coverPhoto,amenities,isPromoted,isExclusiveOffer,isPremium,priceOnRequest,subdistrict,province,displayAddress,monthlyCharges,agencyLicenseNumber,condition,features,media,photos,floorPlans,virtualTour,description,elevator,availableFrom,heating,buildingType,buildingMaterial,windowsType,ownership,constructionStatus,scrapedAt,asOf,parkingType,developmentTitle,developmentUrl
-68559126,https://www.otodom.pl/pl/oferta/stegny-2-pok-43-8-m-9-pietro-widok-ID4DFmm,"Stegny, 2 pok. 43,8 m², 9 piętro, widok",660000,PLN,15068.49,43.8,2,9,15,1978,secondary,agency,Wilsons Nieruchomości Sp. z o.o.,Warszawa,Mokotów,Iberyjska,mazowieckie,52.178513,21.05715,18,flat,sale,2026-10-23T12:23:27Z,2026-11-22T20:20:01Z,30,507,660 000 PLN,"15 068,49 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/wilsons-nieruchomosci-sp-z-o-o-ID3767159,3767159,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcweTVxNG9nNTY3azItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Hzb9ykH5XX5HiMfzgBRNc2sQ-L8ak5sv8KzI5nOtXfA/image,"[""separate kitchen"", ""balcony"", ""storage room""]",False,False,False,False,Stegny,mazowieckie,"Iberyjska, Stegny, Mokotów, Warszawa, mazowieckie",507,12165,do zamieszkania,"[""lift"", ""balcony"", ""separate_kitchen"", ""usable_room"", ""entryphone""]","[""internet"", ""cable television""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImcweTVxNG9nNTY3azItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Hzb9ykH5XX5HiMfzgBRNc2sQ-L8ak5sv8KzI5nOtXfA/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBpdW85amtsYmtsaTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5LrpPwLpECrtfY59UIkdgby7Hdi9Y2ddps2C96YBEaQ/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImdmNDR6ZnJlZnQ3ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.KGQNc0W3g9UMAJaAHS8bPjVGrDmA1p3ktfUOB4PHu70/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InByN2U2NWw2dWs4ZjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.uJ6Z6i90MNtA-n5ZuO0FgFid4EI5RhedXHc9GsC8PdY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijh4enhodHY5Zm82eTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OR8lUp9UOoer4smLLQcUBCLtH4jY1yWkHTdAiU9fJDY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1saHc5eGp4azBxeDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.DX3oJ2KZXNrQaU-kLCJYdXBgZUVRZMYnuCFi0dksX18/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img1bGtnNDkxdzRsdy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.KsZIwciP3KYTXmxhNswgmfx3htL0xucKycTUYO_U6uc/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZ2bnJoMDE2eW94YjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0._1OaQbtzqvuM8GD4lKVf2NJqdLWSs7kQBE6HDPCmKcc/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjNqeGwwdjlwd2ZudTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.QOybyDBJP3Ha1KxmORhyRX_GHxe2IJ3tR3a68w66JaM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjdkMGdtZXBvdG5qbS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.y7C2BGWPXWWcpIhruc8iZm1e_WrBNuUW9BjB20mUP7g/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImF1eWxnMnMwY2hqbzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.3_RrsBpIlxQ-6MzRSA7GlDVwrkuZADhS_kZUdyOphWM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inl2cnh3MXVkZ3VuajItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0._4wy_XcYRwyGAFHyCI_E5P5XwsAOtcjjOpIlaIZiu8c/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNpeThoZzBmam94ZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.V3WZM-f4Y3zE_yBUSBtEquZVKmiqKZi_vg-7ZyeyVIE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjgyYzY1ZXFsa2c4dDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.xftHh950beL-DX-pvJP1_yHpcFI7NDM_hgsItvsRDvo/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImE3M3pmMWFsNHI5ZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qlVs-0SMy9afl1meLkguzyZzm6nz29xitYCL--LOVQg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9mcnVvdzFoeGIzdS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.LYguVLyuB5oZd2i-9H8CW4gsgBWkSNollkpSdV5I-ZM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVyaWdsNWFiNWYxdDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.FKZm4-gBw37wAbCa5uyMEE0LO6ppL0ugeCfTxNSAhUg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InUyNzdxb2Jqeno0cS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.CfZrOXnep1G8hKb6E-DRF7XqoGz2OjMyhBApyTFoRX8/image""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Img1bGtnNDkxdzRsdy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.KsZIwciP3KYTXmxhNswgmfx3htL0xucKycTUYO_U6uc/image""]",https://my.matterport.com/show/?m=NXAgu1pBvUr,"Możliwość uzyskania 3 pokoi/niski czynsz/księga wieczysta/ widok na miasto.
-Zapraszam na prezentację mieszkania o powierzchni 43,8 m2 położonego przy ul Iberyjskiej 4 na Warszawskim Mokotowie - osiedle Stegny.
-To doskonała oferta dla pary, niedużej rodziny lub w celach inwestycyjnych.
-Budynek oddany do użytku w 1978 roku, wyposażony w 2 windy, po wszelkich modernizacjach, administrowany przez SM Energetyka.
-Mieszkanie znajduje się na 9 piętrze, dzięki czemu jest ono świetnie doświetlone , widok z okien niczym nie przysłonięty, strona północno- wschodnia. Wysokość mieszkania to 2,6m.
-Mieszkanie ma duże możliwości aranżacyjne: można pozostać przy obecnym układzie (2 pokoje i osobna kuchnia) lub utworzyć pokój z aneksem kuchennym uzyskując 2 sypialnie.
-Na obecny układ mieszkania składa się:
-- pokój dzienny ok. 18 m2 plus loggia ok. 3,0 m2,
-- kuchnia ok. 7,0 m2,
-- sypialnia ok. 10 m2,
-- łazienka z wc ok. 3,2 m2
-Dodatkową powierzchnię do przechowywania stanowią dwa schowki na korytarzu tuż obok mieszkania oraz wydzielona zamykana część korytarza.
-Mieszkanie spółdzielcze własnościowe z założoną księgą wieczystą bez żadnych obciążeń, możliwość kredytowania zakupu.
-Z aletą jest niski czynsz do administracji - 507 zł.
-Mieszkanie zostało odświeżone i przygotowane do zamieszkania:
-- parkiet dębowy odnowiony,
-- nowe drzwi Gerda o podniesionej klasie akustycznej,
-- wymieniono wszystkie drzwi wewnętrzne,
-- odświeżono łazienkę oraz instalacje,
-- zamontowano okna PCV.
-W okolicy:
-- liczne tereny rekreacyjne, place zabaw i boiska,
-- liczne punkty handlowo-usługowe min Auchan, Rossmann, Pepco nieco dalej CH Sadyba Best
-- na osiedlu znajdują się 2 szkoły publiczne oraz przedszkola.
-- bardzo dobrze rozwinięta komunikacja miejska, przy ul Sobieskiego znajduje się, kilka linii autobusowych oraz tramwajowych - dojazd do centrum zajmuje ok 20 minut.
-Zapraszam na prezentację w dogodnym terminie.
-Jeżeli Twój zakup wiąże się ze sprzedażą innej nieruchomości zadzwoń do mnie. Bezpiecznie przeprowadzę cały proces.
-Świadczymy naszym klientom usługę bezpłatnej konsultacji eksperta kredytowego oraz pomoc w uzyskaniu kredytu hipotecznego. Serdecznie zapraszam na prezentacje oraz do kontaktu telefonicznego.
-Niniejsza prezentacja oferty nie jest ofertą w rozumieniu Kodeksu Cywilnego i ma charakter wyłącznie informacyjny.",True,2026-10-31,urban,block,concrete_plate,plastic,limited_ownership,ready_to_use,2026-11-22T20:25:37Z,2026-11-22T20:25:37Z,,,
-68261452,https://www.otodom.pl/pl/oferta/zwirki-i-wigury-1-sierpnia-29-m2-ID4CpWa,Żwirki i Wigury / 1 Sierpnia 29 m2,455000,PLN,15689.66,29,1,4,10,1970,secondary,agency,STANKO nieruchomości Stanisław Kołodziej,Warszawa,Włochy,1 Sierpnia,mazowieckie,52.194454,20.969221,20,flat,sale,2026-07-29T08:58:09Z,2026-11-15T19:30:35Z,116,0,455 000 PLN,"15 689,66 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/stanko-nieruchomosci-stanislaw-kolodziej-ID10503416,10503416,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZzN242ODQ2YXVuZzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.gsySkZXi3gWKQzw7f0z1i7yfUYyirFfSip75GrpTmHo/image,"[""separate kitchen"", ""balcony"", ""basement""]",False,False,False,False,Okęcie,mazowieckie,"1 Sierpnia, Okęcie, Włochy, Warszawa, mazowieckie",0,7771,do zamieszkania,"[""balcony"", ""basement"", ""separate_kitchen""]",,"[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InZzN242ODQ2YXVuZzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.gsySkZXi3gWKQzw7f0z1i7yfUYyirFfSip75GrpTmHo/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InQ5dDNoOTdjcWppMzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.i54j4QgzJw8a8FO-W3f7Acl2ZgDjyupe_w4tSZ6ests/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjFuZ3gyN3Q4bzNwNjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.tpLSBLAqAbgV-7hsQ6NsvearKJ0rjkm4ruUQy8Rfdak/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjFlMTVwNjNrNTE5YTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.IeFnntIHIv28PCxI_7hbb0WUfDHGBGwY_hDjbkK6v14/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVjYWk3d3J5enM2NTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.gNE0TiSD6HcJ9FKEMiUOqrpEjGoHAIwz6SGLNnld66E/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjA3YWdmeGttMnd5NTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.HzwzrKF7V5jvh0K1wdDZlDRgEPD3TB6ZUUfnCjynTgo/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImI3NWwyNTlzNHh4cTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0Vh8Pmv1WIeoGD-MME1Jmbq1zhfJlO8mCjgIoKgWTsU/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZidXhuaG9vNmZmMDMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.2QJqQ_w74I2tF-2jwPK3LapiduCYdtEL6BvoGIyQ8p8/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ino4bHhtbXdkanJjbjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OEpmtA6BbvSjDBOq3cICgC3cHHK2ItmqJJAC7IcZtIU/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImR0ZzVycDkzYzlhbTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.O9kMo5Kd_XRa-YIKhtaKLyncpJ22Q7rhS9B0uUQqbQ4/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtrYWdvbHpod21reC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.-0NoNdJmhNhDAYK3q23rjk6HakjNkP-vDng83e64riA/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVkamJ6aHZueGM5MjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ghfdjXyInxH_KwA1U0NvzX7dvNXEhhCEwFzfIIcOV8E/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijd6d3oybWdnZ3J3YzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.rwC1qY9DnaDN5Bc3ZeAMQH9wyg11izBN6o_2xoccbss/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImR2bDZrYzc1YzZucy1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UyG9PX9MFcfxaPHdJEGm1o4ubXAduICm1v_SEh6zdD0/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjN5ZXR2MnR6NzJlNC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.oplUQ_CgdqchJBNuvtPVsUfjccR4GcEwtm0LzJs_UgM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InNma2pvbzF6emhxcDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.-kx3Nt2TJaredmkFuztX1xErqVQoVi3Y2exg5Jgm5kY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZkeTl2cTRoc2l5ZDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.lANUYgp2c_W3J9PeCgBS6hm6H12sy7dM9tuGW29Q2ZY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImJhMHhnZWNiY3JndDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.eo8DJBkzWka0rFTcnoP2UPedVrsJ9N-HdArFlKn7w2k/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IndocG41dmR5dnUwejEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.j-kOQD9LaD2b4W_Itya1wjN78LkEENDaO4LCY0yD_NU/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InYyZXEzejVla2ZqaDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.mR7wN5v6UweKhtMoLF3DBD9KcxDHMS1Z4-0cmEHm-BY/image""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVjYWk3d3J5enM2NTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.gNE0TiSD6HcJ9FKEMiUOqrpEjGoHAIwz6SGLNnld66E/image""]",,"Włochy, 1 Sierpnia przy Radarowej 29 m.
-Oferujemy Państwu do sprzedaży 1-pokojowe mieszkanie w super lokalizacji - 1 SIERPNIA przy Radarowej, pogranicze Ochoty i Włoch, najbliższe sąsiedztwo Parku Marka Kotańskiego (siłownia plenerowa, aleje spacerowe). Obok budynku Okęcka Sala Widowiskowa Domu Kultury Włochy, Przychodnia Lekarska oraz Przedszkole..
-Mieszkanie posadowione jest na 4 kondygnacji w 10 piętrowym budynku wybudowanym w 1970 roku. Budynek po termomodernizacji, wymianie wszystkich instalacji, remontach klatek schodowych. Klatki schodowe wyłożone terakotą, 2 nowe windy. Pełna modernizacja budynku - 2018 rok w tym remont piwnicy. Wejście do budynku na domofon, nieruchomość jest objęta siecią monitoringu. Budynek zatopiony w zielni podwórka - z ławeczkami, odsunięty od ulicy, z okien mieszkania widok na zieleń. Mieszkanie bardzo ciche.
-Opis -
-Wielkości pomieszczeń:
-- przestronny i dobrze doświetlony salon 18 m (okna cztery skrzydła w tym balkonowe) z wyjściem na balkon,
-- oddzielna widna kuchnia z oknem 4,5 m,
-- łazienka z wanną 3,5 m,
-- przedpokój z miejscem na szafy przy wejściu około 3 m,
-- balkon około 2 m,
-- piwnica 3 m,
-- powierzchnia lokalu 28,93 m.
-Plan lokalu załączony do oferty.
-Stan techniczny:
-Lokal posiada nowe okna PCV (rolety), drzwi wejściowe Gerda.
-Balkon zabudowany - profesjonalna zabudowa (aluminium, szkło) okna rozsuwane, szczelne.
-Mieszkanie jest prawie bez mebli, przygotowane do odnowienia / remontu.
-Stan prawny:
-Pełna własność mieszkania, czyli możliwość wsparcia zakupu kredytem.
-Dokumentacja nieruchomości, lokalu przygotowana do sprzedaży.
-Opłaty:
-Czynsz administracyjny z funduszem remontowym 710 zł.
-Prężnie, wzorcowo działająca Wspólnota Mieszkaniowa i administracja.
-Okolica:
-Posadowienie, lokalizacja tej nieruchomości daje świetne możliwości komunikacyjne w każdym kierunku miasta - tramwaje, autobusy oraz SKM. Przystanek autobusowy przy bloku.
-Istotnym atutem tego miejsca jest bliskość szkół, przedszkoli, sklepów (Lidl, Biedronka, Żabka), punktów usługowych, przychodni lekarskich oraz restauracji i kawiarni. W najbliższym sąsiedztwie Centra Handlowe. Super propozycja dla singla, młodej pary lub bezpiecznej lokaty kapitału. Blisko Warszawski Uniwersytet Medyczny.
-Parkowanie:
-Obok budynku jest wiele miejsc parkingowych. Na ten moment teren poza Strefą Płatnego Parkowania
-Zapraszam na prezentacji
-Więcej informacji na kontakt e-mail lub telefoniczny..
-Niniejsze ogłoszenie nie stanowi oferty w rozumieniu Kodeksu Cywilnego lecz ma charakter informacyjny. Treść, zawarte informacje w ogłoszeniach oparte są na informacjach uzyskanych od właściciela/li oferowanej nieruchomości.
-Oferujemy profesjonalną obsługę transakcji - gwarancja - wsparta doświadczeniem od 2004 roku.
-Wspieramy naszych Klientów bezpłatną pomocą przy uzyskaniu kredytu hipotecznego.
-Współpracujemy z architektami wnętrz oraz sprawdzonymi firmami remontowymi. Zapraszamy",False,,,,,plastic,full_ownership,ready_to_use,2026-11-22T20:25:37Z,2026-11-22T20:25:37Z,,,
-68662254,https://www.otodom.pl/pl/oferta/kompaktowe-mieszkanie-idealne-na-start-lub-inwestycje-ID4E6bI,"Kompaktowe mieszkanie, idealne na start lub inwestycję.",697000,PLN,16595.24,42,2,5,5,2018,secondary,,,Warszawa,Ursynów,Pieskowa Skała,mazowieckie,52.164364,20.995558,12,flat,sale,2026-11-22T20:07:07Z,2026-11-22T20:07:07Z,0,850,697 000 PLN,"16 595,24 PLN/m²",,,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJ3am05MmJtOWF6NzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OQ4cyY1acyL3YyFc6HjnKvEM7EvbhFK-VaIo2GPMCR0/image,"[""balcony"", ""basement"", ""top floor"", ""parking"", ""secure building""]",False,False,False,False,Wyczółki,mazowieckie,"Pieskowa Skała, Wyczółki, Ursynów, Warszawa, mazowieckie",850,,do zamieszkania,"[""balcony"", ""garage"", ""basement"", ""lift"", ""dishwasher"", ""fridge"", ""oven"", ""anti_burglary_door"", ""entryphone"", ""closed_area""]","[""internet""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJ3am05MmJtOWF6NzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OQ4cyY1acyL3YyFc6HjnKvEM7EvbhFK-VaIo2GPMCR0/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Indyd2hvd3dya3Nnby1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.8Pqj93OJMpH1esd2_Qkip6HhoD6Wc2lDa3wUsFbMetE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im10Nm84c3Z1cHBtMzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ZETLFFR2087CCUdthnhdwjOAwQfbuJEsFe6qp2MBX5g/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Impzdmo2bjVrNjYway1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.sktNmIAoK4i7k-F2PgzHAfxzwH2Ae93xwvpCfHrRv74/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InV5bjYzamk1ZXl4bzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.tnsQBK7fvNYg7rJ4rOYW1NjtlDHWyKkZ7Hw30SuNXxI/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InpreXZsNjdrNzk1MzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.P_TFSQvLqyzLHVB4mUrKX7GbuR0D-2b2bru2L1O7t_A/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InNsajZ1M3huZnlhdTMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.hDYeSfoDyHFvPpCZQymO9I0f54P_Oc4gyjaaFGH7qzk/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjB6b2VzN3U5cDUybi1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.fpgQkdtAUMDTDcTxQN1uFgbT9haarSCoBusyCPP70KI/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im1xdGhqeW80bWhtazEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.3IxBzHrnGRlbshsuvjR78YLEjrCPWRzuLWMUUPV8stk/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImVydjN1MnBsbTN2NS1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.W6oiNJczH0EiQcp4c9xqtUAlT5TaED5bpUdS7CcrAZE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJza28wNnoyeW4wOC1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.EhQAKL6FRS8pA3v8iB67oy4fiuIai1eLQI_3QtQteoM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtxbXpxM21uMzI2dDMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.PEqLly9jqvRFfoOcCUp5Na34x796GefWBTifmVRY5qc/image""]",,,"Oferta na wyłączność. W cenie komórka lokatorska.
-Dwupokojowe mieszkanie z widną kuchnią, dokładna powierzchnia 41,58m2. Blok z 2018 roku, piętro 5/5, jest winda. Lokal składa się z pokoju dziennego z kuchnią (całość 18m2), sypialni (11m2), łazienki (5m2) oraz przedpokoju z bardzo pojemnym ciągiem szaf. Nieruchomość posiada balkon (3.5m2). Mieszkanie czyste, zadbane, do odświeżenia ściany, ewentualnie wymiana listew podłogowych. Osiedle zamknięte, z ładnie zagospodarowaną częścią wspólną, dużo zieleni, oczko wodne. Forma własności: samodzielny lokal mieszkalny z księgą wieczystą, bez hipotek. Czynsz 850 zł przy trzech osobach. Możliwość zakupu miejsca postojowego w garażu podziemnym w cenie 50 tys. - nie jest obowiązkowe, osobna księga wieczysta. Mieszkanie znajduje się w zielonej i dobrze skomunikowanej części Ursynowa, w bliskim sąsiedztwie biznesowego Mokotowa i zaledwie 4 km od lotniska. Na terenie osiedla trzy przedszkola, w tym jedno publiczne, liczne punkty usługowe, handlowe i gastronomiczne. Do stacji PKP Warszawa Okęcie 12 minut pieszo. Zapraszam do kontaktu zarówno inwestorów, jak i osoby szukające dla siebie przyjaznego miejsca do życia w rozwijającej się części Warszawy, z dużym potencjałem na przyszłość.",True,2026-11-23,urban,block,breezeblock,plastic,full_ownership,ready_to_use,2026-11-22T20:25:37Z,2026-11-22T20:25:37Z,garage,,
-68662243,https://www.otodom.pl/pl/oferta/muranow-48m2-dwupokojowe-do-wlasnej-adaptacji-z-loggia-ID4E6bx,"Muranów, 48m2, dwupokojowe do własnej adaptacji z loggią",690000,PLN,14375,48,2,6,10,1969,secondary,,,Warszawa,Wola,Miła,mazowieckie,52.249287,20.986383,10,flat,sale,2026-11-22T20:03:05Z,2026-11-22T20:03:05Z,0,850,690 000 PLN,14 375 PLN/m²,,,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImpqeDh3ZGd0d3doNDItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.7i5U60uqkBm-PISJFDidKaSevYOXaIkB5xlQi9qumIs/image,"[""separate kitchen"", ""balcony"", ""basement""]",False,False,False,False,Nowolipki,mazowieckie,"Miła, Nowolipki, Wola, Warszawa, mazowieckie",850,,do remontu,"[""balcony"", ""basement"", ""lift"", ""separate_kitchen""]",,"[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImpqeDh3ZGd0d3doNDItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.7i5U60uqkBm-PISJFDidKaSevYOXaIkB5xlQi9qumIs/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNmend2MHhvNXBqYjMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.xx-L5z7YWQe0N0X4v-5tMp9TU7BM4Bbo3i3nZW2lOnM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjJsbnI2ZjB4djRoeTEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.qhHLRQUSbfMi5xl0KVvCERetmgPxbrfIY8L9cdBNRXs/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBkeWw1ZG9xMnVnODMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.0auYc2MSo7qaC81lXpwb8LplT8u0KUmF5Lx3jdmMkJk/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjVwNHQ2ZzUzbDh6dS1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.FqIk6sNLsDmHuKwSy9knVEHINYjrWzbyT84q7ME0A64/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im81aDA0N204NjZqZDEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.VDQqFKI2Z1_MTv2bUFZzYOZtT0zJS1I7uOiP0q_Aobo/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InEzcGdvamhzYTI0NTMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.rI0carvhcyBhQxuwCS0DZwnhZdvS9awapRI1Z6HBDqQ/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImlyYTRsaG5veXJsNzMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.OUOh6jbdReqXC3UasMRmn7yFy6_TijPBysTGBdYjoH8/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBwYTc5YTIxYmk5bDMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.N34xYZx37IiIinBwJMd4w_ghb1YlGVVb71EwzVArZ28/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im11ZjRud2hnNjEyNTItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ljy4J115VL3FKCIkI-HetvN_YROSNNedXsSxnS6LbDs/image""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im11ZjRud2hnNjEyNTItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ljy4J115VL3FKCIkI-HetvN_YROSNNedXsSxnS6LbDs/image""]",,"Do sprzedaży dwupokojowe mieszkanie u zbiegu ulic Miła/Jana Pawła II.
-Lokal bardzo jasny. Wschód/Zachód.
-Pokój duży z wygodną wnęką do aranżacji ok 21m2 z wyjściem na loggię.
-Sypialna ok 15m2.
-Świetna komunikacja miejska w każdym kierunku (tramwaje, autobusy)
-W okolicy pełna infrastruktura ze szkołami, przedszkolami, sklepami, restauracjami oraz punktami usługowymi.
-do lokalu przynależy piwnica
-czynsz administracyjny: 850 zł
-Niniejsza prezentacja oferty nie jest ofertą w rozumieniu Kodeksu Cywilnego i ma charakter wyłącznie informacyjny",True,2026-11-23,urban,block,,plastic,full_ownership,to_renovation,2026-11-22T20:25:37Z,2026-11-22T20:25:37Z,,,
-66340743,https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-58m2-balkon-bez-prowizji-ID4umfZ,2-pokojowe mieszkanie 58m2 + balkon Bez Prowizji,897600,PLN,15385.67,58.34,2,0,7,2025,primary,agency,SKANSKA RESIDENTIAL DEVELOPMENT POLAND SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ,Warszawa,Praga-Południe,Precyzyjna,mazowieckie,52.2306,21.10796,7,flat,sale,2025-01-14T08:52:50Z,2026-11-22T19:56:06Z,677,,897 600 PLN,"15 385,67 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/skanska-residential-development-poland-spolka-z-ograniczona-odpowiedzialnoscia-ID10556404,10556404,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InF1NDFvNHQ2Zm1rbDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UDyLvlgYivuv6jPFvhklZfTMbGad5I_lCuJmMF36PQg/image,"[""separate kitchen"", ""balcony"", ""parking"", ""ground floor""]",False,False,False,False,Gocław,mazowieckie,"Precyzyjna, Gocław, Praga-Południe, Warszawa, mazowieckie",,,do wykończenia,"[""garage"", ""separate_kitchen"", ""balcony"", ""lift""]",,"[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InF1NDFvNHQ2Zm1rbDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.UDyLvlgYivuv6jPFvhklZfTMbGad5I_lCuJmMF36PQg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijg0ZjU0eWV5NXVnNTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.FNfs0FCY8HddssSMvmTbZw_psJp7xNc3PfOIR7TYuXQ/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imp5Y3R4NzR1Y29wMDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5nslIdrm0gh3MInNTRwNZOeDAH-6RUzyRp9tswaA5uc/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im14M2c2Zmc4cWIxMTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Q4cP7LCSs-LTe0cY1ljP1CAjUGSkcIEPFNDidxvpCVc/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijk2ajZyMTVpanl6azItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ZIQMSddciarcT9F-g8M8Lyi4aTzqzUQiib8vxJOF2pg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InE1dDBtNnk1anc0NTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.vWkAoyVNjKwB3gXzF3yyzWoj0icUT89zYPab9WsPLw0/image""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijg0ZjU0eWV5NXVnNTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.FNfs0FCY8HddssSMvmTbZw_psJp7xNc3PfOIR7TYuXQ/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imp5Y3R4NzR1Y29wMDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.5nslIdrm0gh3MInNTRwNZOeDAH-6RUzyRp9tswaA5uc/image""]",https://obido.pl/rynek-pierwotny-warszawa/park-skandynawia-v/mieszkanie-ha0002.3d.ffbe95148b35f88e2a0bc380dd2a784b,"2-pokojowe mieszkanie numer HA0002 na parterze w budynku H w Inwestycji Park Skandynawia V Dewelopera Skanska
-Ponadstandardowa wysokość pomieszczeń
-Mini boisko do koszykówki, siłownia zewnętrzna, stół ping-pongowy, stoliki szachowe
-Leżaki i ławeczki, plac zabaw dla dzieci
-Park nad Balatonem (20 minut spacerem)
-Przystanek autobusowy (2 minuty spacerem)
-CH Atrium Promenada, Carrefour (5 minut spacerem)
-Trasa Siekierkowska (7 minut samochodem)
-Park Skandynawia V - poznaj inwestycję
-Park Skandynawia V to ostatni etap projektu inwestycyjnego Skanska, który cieszy się ciągłym zainteresowaniem. To osiedle doskonale odzwierciedla szwedzki styl życia , kładąc nacisk na ekologiczne rozwiązania, solidną jakość i funkcjonalnie zorganizowaną przestrzeń.
-W ramach piątego etapu planowane są dwa 7-piętrowe budynki , oferujące zróżnicowane mieszkania o powierzchni od 24,91 do 124,88 mkw. i wysokości około 2,7-2,8 m. Lokale wyróżniają się starannie zaprojektowanymi układami, z możliwością wydzielenia garderób. Mieszkania są jasne, dobrze doświetlone i posiadają prywatne przestrzenie w postaci balkonów, tarasów lub przestronnych ogródków na parterze.
-Budynki zostaną starannie wykończone, z zachowaniem skandynawskiej kolorystyki. Dla mieszkańców dostępny będzie dwukondygnacyjny garaż, komórki lokatorskie , boksy rowerowe, wózkownia i stojaki rowerowe. Osiedle już teraz oferuje rozwiniętą infrastrukturę ze sklepami i usługami.
-Aby stworzyć oazę w środku miasta, pomiędzy budynkami zaplanowano dziedzińce z różnorodnymi gatunkami roślin, małymi elementami architektonicznymi oraz miejscami dla ptaków i owadów. Na terenie osiedla znajdują się także miejsca do wypoczynku i rekreacji , takie jak leżaki, ławeczki, miniboisko do koszykówki, siłownia zewnętrzna oraz stół pingpongowy, stoliki szachowe i plac zabaw dla dzieci.
-Park Skandynawia zdobył uznanie mieszkańców, zajmując pierwsze miejsce w konkursie na najbardziej zielone osiedle stolicy organizowanym przez Polski Związek Firm Deweloperskich.
-Projekt został opracowany z myślą o ochronie środowiska, korzystając z energooszczędnych rozwiązań, takich jak panele fotowoltaiczne zasilające wybrane mieszkania, system Smart Home Appartme , oświetlenie LED oraz czujniki ruchu. Park Skandynawia, podobnie jak wszystkie inwestycje Skanska, powstaje z poszanowaniem zasad zrównoważonego budownictwa , umożliwiając ekonomiczne, komfortowe i odpowiedzialne mieszkanie.
-Park Skandynawia V - lokalizacja
-Praga-Południe, ul. Precyzyjna 4
-6,5 km do centrum
-3 min. spacerem do przystanku autobusowego
-5 min. samochodem do planowanego metra
-8 min. samochodem do przystanku tramwajowego
-dojazd do centrum: 21 min samochodem
-Istotne punkty w okolicy inwestycji Kawiarnia (119 m, 2 minuty spacerem)
-Przystanek autobusowy (159 m, 3 minuty spacerem)
-Apteka (171 m, 3 minuty spacerem)
-Promenada (184 m, 3 minuty spacerem)
-Lekarz (223 m, 4 minuty spacerem)
-Restauracja (269 m, 4 minuty spacerem)
-Sklep: Carrefour (350 m, 5 minut spacerem)
-Kino (341 m, 6 minut spacerem)
-Piekarnia (341 m, 6 minut spacerem)
-Poczta (383 m, 6 minut spacerem)
-Przedszkole (424 m, 6 minut spacerem)
-Siłownia (432 m, 6 minut spacerem)
-Żłobek (481 m, 7 minut spacerem)
-Szkoła Podstawowa (844 m, 12 minut spacerem)
-Sklep: Lidl (980 m, 14 minut spacerem)",True,2025-12-12,,,,,full_ownership,to_completion,2026-11-22T20:25:37Z,2026-11-22T20:25:37Z,garage,Park Skandynawia V,https://www.otodom.pl/pl/inwestycja/park-skandynawia-v-ID4um07
+id,url,title,priceAmount,priceCurrency,pricePerM2,areaM2,rooms,floor,totalFloors,buildYear,market,advertiserType,agencyName,city,district,street,region,lat,lng,imagesCount,propertyType,dealType,createdAt,modifiedAt,daysOnMarket,rentPrice,priceFormatted,pricePerM2Formatted,agencyUrl,agencyId,coverPhoto,amenities,isPromoted,isExclusiveOffer,isPremium,priceOnRequest,subdistrict,province,displayAddress,monthlyCharges,deposit,condition,features,media,photos,description,elevator,constructionStatus,scrapedAt,asOf,changeType,firstSeenAt,lastSeenAt,priceHistory,priceDirection,priceChangePct,parkingType,availableFrom,heating,buildingType,buildingMaterial,windowsType,agencyLicenseNumber
+68591814,https://www.otodom.pl/pl/oferta/mieszkanie-43-m-przy-ul-zupniczej-12-praga-poludnie-ID4DNRA,"Mieszkanie 43 m², przy ul. Żupniczej 12, Praga-Południe",4500,PLN,104.65,43,2,2,7,,,agency,A REAL ESTATE,Warszawa,Praga-Południe,Żupnicza,mazowieckie,52.251347,21.062424,5,flat,rent,2026-11-02T14:51:53Z,2026-11-02T14:51:53Z,22,650,4 500 PLN,"104,65 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/a-real-estate-ID11689503,11689503,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImFzYmhuNTJ3b21wNTEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.lYR7Pyjak8dFywqNxR4-q0bbwysOaC2pu52JCLMZXRw/image,"[""air conditioning"", ""balcony"", ""secure building""]",False,False,False,False,Kamionek,mazowieckie,"Żupnicza, Kamionek, Praga-Południe, Warszawa, mazowieckie",650,6000,do zamieszkania,"[""balcony"", ""air_conditioning"", ""lift"", ""furniture"", ""washing_machine"", ""dishwasher"", ""fridge"", ""stove"", ""oven"", ""tv"", ""entryphone"", ""monitoring""]","[""internet""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImFzYmhuNTJ3b21wNTEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.lYR7Pyjak8dFywqNxR4-q0bbwysOaC2pu52JCLMZXRw/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBoeXo4cGgwODhzZC1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.1nA2OyD0vracULr9K8hdKR_n4RWrtd2S8sBZnMfeNxY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ino1czhlcHIwd3Y4czItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.BUsTbvS9Tf39tuTIEZz16mjUrsqM6SS-Vu6RypZsE8k/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImxyanJua3B1ZjkwZS1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.OjKSfMSg_Fy7r2O6fhPhWUqQoHHokw_DiGb-RlYfJaA/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImRjcmJhZGN6ZDhlNzItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.k4MQVMl1u3hJ3DuFwiKE9lUVRGNVfRzWoHWqSLXdtCM/image""]","WE SPEAK PL / ENG / UA / RU
+Do wynajęcia nowoczesne, zupełnie nowe mieszkanie o powierzchni 43 m², położone przy ul. Żupniczej 12 na warszawskim Kamionku, w dzielnicy Praga-Południe. Lokal znajduje się na 2. piętrze nowoczesnego apartamentowca z 2026 roku. Mieszkanie jest w pełni umeblowane i wyposażone, gotowe do zamieszkania. To idealna propozycja dla osób ceniących nowoczesny standard, komfort oraz dogodną lokalizację.
+MIESZKANIE SKŁADA SIĘ Z:
+salonu
+oddzielnej sypialni
+kuchni
+łazienki
+przedpokoju
+prywatnego balkonu z przyjemnym widokiem
+WYPOSAŻENIE :
+mieszkanie w pełni umeblowane
+lodówka
+zmywarka
+piekarnik
+kuchenka
+pralka
+telewizor
+klimatyzacja
+balkon
+winda w budynku
+domofon / wideofon
+monitoring / ochrona
+możliwość wynajęcia miejsca parkingowego w garażu podziemnym
+LOKALIZACJA :
+ul. Żupnicza 12, Kamionek, Praga-Południe, Warszawa
+tuż obok parku
+bardzo dobre połączenie komunikacyjne z centrum miasta
+siłownia, supermarket i pracownia ceramiczna w odległości około 5 minut spacerem
+nowoczesny budynek z licznymi udogodnieniami
+WARUNKI FINANSOWE:
+Czynsz najmu: 4 500 zł / miesiąc
+Czynsz administracyjny: 650 zł / miesiąc
+Miejsce parkingowe: 400 zł / miesiąc (opcjonalnie)
+Kaucja: 6 000 zł
+Dostępność: od 1 listopada 2026 r.
+Ogrzewanie: elektryczne
+Jako agencja nieruchomości pobieramy wynagrodzenie w formie prowizji.
+Oferta nr: 86283376
+Jeśli poszukują Państwo innych ofert w podobnych kryteriach, zapraszamy do kontaktu!
+-----------------------------------------------
+WE SPEAK PL / ENG / UA / RU
+A modern, brand-new 43 m² apartment for rent at 12 Żupnicza Street, in the Kamionek area of Warsaw's Praga-Południe district. The apartment is located on the 2nd floor of a modern apartment building completed in 2026. It is fully furnished and equipped, ready to move in. An excellent choice for those who appreciate modern finishes, comfort and a convenient location.
+THE APARTMENT CONSISTS OF:
+a living room
+a separate bedroom
+a kitchen
+a bathroom
+an entrance hall
+a private balcony with a pleasant view
+FURNISHINGS AND AMENITIES:
+fully furnished
+refrigerator
+dishwasher
+oven
+cooktop
+washing machine
+TV
+air conditioning
+private balcony
+elevator
+intercom / video intercom
+CCTV monitoring / security
+optional underground garage parking space
+LOCATION :
+12 Żupnicza Street, Kamionek, Praga-Południe, Warsaw
+located right next to a park
+excellent public transport connections to the city centre
+gym, supermarket and ceramic studio within approximately a 5-minute walk
+modern residential building with numerous amenities
+FINANCIAL TERMS:
+Monthly rent: 4,500 PLN
+Administrative fee: 650 PLN / month
+Optional parking space: 400 PLN / month
+Security deposit: 6,000 PLN
+Availability: from 1 November 2026
+Heating: electric
+As a real estate agency, we charge a commission for our services.
+Listing No.: 86283376
+If you are looking for other properties that meet similar criteria, please feel free to contact us!",True,ready_to_use,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,new,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,"[{""priceAmount"": 4500, ""priceCurrency"": ""PLN"", ""pricePerM2"": 104.65, ""observedAt"": ""2026-11-25T00:38:14Z""}]",new,,,,,,,,
+68592032,https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-72-m-osiedle-wilno-garaz-balkon-ID4DNW6,3-pokojowe mieszkanie 72 m² | Osiedle Wilno | Garaż | Balkon,4500,PLN,62.5,72,3,3,,,,agency,A REAL ESTATE,Warszawa,Targówek,Janowiecka,mazowieckie,52.278946,21.094631,8,flat,rent,2026-11-02T15:35:57Z,2026-11-02T15:35:57Z,22,1200,4 500 PLN,"62,5 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/a-real-estate-ID11689503,11689503,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImRvZGtncHd4bW9tbTItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.cJdvdBHN-bC1p3vti23_XxpqkCYPRgBkQ5djf_-FJtw/image,"[""balcony"", ""parking""]",False,False,False,False,Elsnerów,mazowieckie,"Janowiecka, Elsnerów, Targówek, Warszawa, mazowieckie",1200,4500,do zamieszkania,"[""balcony"", ""lift"", ""garage"", ""furniture"", ""washing_machine"", ""dishwasher"", ""fridge"", ""stove"", ""oven""]","[""internet""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImRvZGtncHd4bW9tbTItQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.cJdvdBHN-bC1p3vti23_XxpqkCYPRgBkQ5djf_-FJtw/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjRhOWcwcTVtd2dkbTMtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.xdmARV5cugRBk96Xy9V-2ur9cTw_1V9Uf6I6LW3MDbg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZnc2drMmZlNzI1ZjEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.nTSTo-7Jju5i9b0mEA4MTl3omU1KEan3W-90un_Lin4/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZrd2NmbmViZDRzNzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Z_zpTk5U2voCvsAqktVS4ED7dvhB6IqIERP22HidA50/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRwYTQxb3RsNWJpOS1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.XbqD3Opd77PiOzkPDvkiRxRxvqMQdDJ2JqfqPTBnc0U/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InRldG56b21vNTVjNy1BUEwiLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.C8abHpT312bXVuI5YyZsCGctDrG3MMdeIzVINHJaVuY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZwNWpjYWt5cWRtbzEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.uJay6sBMDsgnHoOF3-F-stOwt9kSQ49i1nBkQApfU-A/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InFjMzN1eDVzZnZ3NjEtQVBMIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.GV8OS71IajdcRuHHe4s02mmIGwjaHQjU1DwXabZKxkQ/image""]","WE SPEAK PL / ENG / UA / RU
+3-pokojowe mieszkanie 72 m² | Osiedle Wilno | Garaż | Balkon
+Mamy przyjemność zaprezentować przestronne, umeblowane i w pełni wyposażone mieszkanie o powierzchni 72 m², zlokalizowane przy ul. Pohulanka na Osiedlu Wilno. Lokal jest gotowy do zamieszkania od zaraz i idealnie sprawdzi się dla rodziny lub osób ceniących komfortową przestrzeń.
+MIESZKANIE SKŁADA SIĘ Z
+3 pokoi
+Przestronnego salonu z aneksem kuchennym
+2 łazienek
+Balkonu
+WYPOSAŻENIE I ATUTY
+Mieszkanie w pełni umeblowane i wyposażone
+Miejsce parkingowe w garażu
+Winda w budynku
+Możliwość zamieszkania ze zwierzętami
+Gotowe do wprowadzenia od zaraz
+WARUNKI NAJMU
+Czynsz najmu: 4 500 zł/mies.
+Czynsz administracyjny: 1 200 zł/mies.
+Dodatkowe opłaty: według zużycia
+Kaucja: 4 500 zł
+Dostępne od zaraz
+Zwierzęta: akceptowane
+Jako agencja nieruchomości pobieramy wynagrodzenie w formie prowizji.
+Oferta nr:86283373
+Jeśli poszukują Państwo innych ofert spełniających podobne kryteria, zapraszamy do kontaktu!
+---------------------------------------------------------------------------------------------------
+3-Room Apartment 72 m² | Osiedle Wilno | Garage | Balcony
+We are pleased to present a spacious, fully furnished and equipped 72 m² apartment located on Pohulanka Street in the Osiedle Wilno development. The apartment is ready to move in immediately and is an excellent choice for a family or anyone looking for comfortable living space.
+THE APARTMENT CONSISTS OF
+3 rooms
+Spacious living room with an open-plan kitchen
+2 bathrooms
+Balcony
+FEATURES AND AMENITIES
+Fully furnished and equipped
+Parking space in the garage
+Elevator in the building
+Pets are welcome
+Ready to move in immediately
+RENTAL TERMS
+Monthly rent: PLN 4,500
+Administrative fee: PLN 1,200/month
+Additional utilities: according to consumption
+Deposit: PLN 4,500
+Available immediately
+Pets: welcome
+As a real estate agency, we charge an agency commission.
+Offer No.:86283373
+If you are looking for other properties matching similar criteria, please feel free to contact us!",True,ready_to_use,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,new,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,"[{""priceAmount"": 4500, ""priceCurrency"": ""PLN"", ""pricePerM2"": 62.5, ""observedAt"": ""2026-11-25T00:38:14Z""}]",new,,garage,,,,,,
+68572710,https://www.otodom.pl/pl/oferta/kawalerka-28-m-klimatyzacja-8-pietro-wola-okopowa-ID4DITs,"Kawalerka | 28 m² | klimatyzacja | 8. piętro | Wola, Okopowa",2300,PLN,82.14,28,1,8,11,1970,,agency,FN HOME,Warszawa,Wola,Okopowa,mazowieckie,52.242805,20.977293,9,flat,rent,2026-10-27T17:58:19Z,2026-11-24T23:58:26Z,28,615,2 300 PLN,"82,14 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/fn-home-ID9925193,9925193,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNmaW1vZmNxNXUxdTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.4sybusXW8LUx2vxooCig5Ti-xc7m8K9dQhdi1TJM7N4/image,"[""separate kitchen""]",False,False,True,False,Młynów,mazowieckie,"Okopowa, Młynów, Wola, Warszawa, mazowieckie",615,3000,do zamieszkania,"[""lift"", ""separate_kitchen"", ""furniture""]",,"[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImNmaW1vZmNxNXUxdTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.4sybusXW8LUx2vxooCig5Ti-xc7m8K9dQhdi1TJM7N4/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImhpN29qODliam1zdzEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.xfWWZOpbgB2bk_ixj3z3I5B5lLR-0OGoqbvGiBPyJck/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZrNm01bHBlaTZpOC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.Dp2ODN8dTJI4o14L5aZCBU0iPOr6OrM8dAtitOaDceI/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9nZzV0aTM3anJzejEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ePMpOSP9NBDfzBmstIwV5Gqi-fBgrzpk4HKjqGUPxwY/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjB4ZzRteHduOTdiZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.5QVh40P7OJAGfSJujuO2RfUFf3Rfd4-bz37IFoh2Iz4/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjMyNnhmMWE5NXQwYS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.qCpVB2pberHQpYxG0-3HNmNkD750XknppyVrhQhnG9Y/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImU0MGhiOTVnc29rbi1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.hi1PSyBYVbU3ApsbCXwI2uYzkbt767pciBQVX9v0ClM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImduZGZlcGRwY2dkNzMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Ppe6SDUbSNet2wKH40lzRFqixqM7DIXd-nhA20HCskE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imoxejlrbm4yYTlsZS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.LH08F6u5E5jGyDxYaGv1xghhM-d1_mpLkqGoGekB048/image""]","Kawalerka w wieżowcu przy Okopowej 45 na warszawskiej Woli. Mieszkanie o powierzchni 28 m² zajmuje 8. piętro jedenastopiętrowego budynku, jest w pełni umeblowane i gotowe do zamieszkania od 1 listopada 2026 roku. Do najważniejszych atutów należą klimatyzacja, parkiet lub drewniane panele na podłodze oraz doskonała komunikacja z centrum miasta.
+Mieszkanie
+Kawalerka o powierzchni 28 m² mieści się na 8. piętrze wieżowca. Układ obejmuje jeden pokój z aneksem kuchennym oraz łazienkę. Kuchnia jest ciemna, bez okna, w formie aneksu. Łazienka wyposażona jest w wannę i pralkę. Podłogi wykończone są parkietem lub drewnianymi panelami. Mieszkanie zostało wyremontowane w 2021 roku i wcześniej służyło właścicielowi jako miejsce zamieszkania. Drzwi wejściowe są antywłamaniowe. Budynek wyposażony jest w dwie windy i domofon.
+Wyposażenie
+Mieszkanie jest w pełni umeblowane i wyposażone. W salonie znajdują się: sofa rozkładana, biurko, krzesło biurowe, komoda, regały oraz witryna. Aneks kuchenny wyposażony jest w kuchenkę gazową Amica z piekarnikiem, lodówkę Amica oraz ekspres do kawy DeLonghi. W łazience stoi pralka Mastercook. Mieszkanie posiada klimatyzację ze sterownikiem ściennym. Dostępny jest szybki internet światłowodowy (Netia). Zmywarki nie ma.
+Lokalizacja
+Okopowa 45 leży w dzielnicy Wola, w odległości około 2,7 km od centrum Warszawy. To jeden z lepiej skomunikowanych adresów na Woli.
+Komunikacja
+Bezpośrednio przy budynku, w odległości około 200 metrów, znajdują się przystanki tramwajowe i autobusowe Dzielna oraz Cmentarz Żydowski, obsługiwane przez tramwaje linii 1, 22 i 27 oraz autobusy linii 180, N41 i N91. W pobliżu dostępny jest również przystanek Esperanto, z którego kursują autobusy linii 107, 111, 180 oraz nocne N41 i N91. Najbliższe stacje metra to Rondo Daszyńskiego (linia M2) oraz Ratusz Arsenał (linia M1), obie w odległości umożliwiającej dojazd tramwajem lub autobusem w kilka minut.
+Zakupy i usługi
+W najbliższej okolicy znajdują się liczne sklepy, restauracje, kawiarnie, piekarnie, punkty usługowe oraz placówki medyczne. W promieniu krótkiego spaceru dostępne są sklepy spożywcze, drogerie, apteki, banki, poczta oraz przychodnia LUX MED. Centrum handlowe Klif znajduje się w odległości około 550 metrów, a Westfield Arkadia w odległości około 1,7 km.
+Gastronomia
+Okolica Okopowej oferuje szeroki wybór gastronomiczny. W bliskiej okolicy budynku znajdują się restauracje z kuchniami z różnych stron świata oraz przytulne kawiarnie.
+Sport i rekreacja
+Przy ulicy Okopowej 56, w bezpośrednim sąsiedztwie, działa siłownia Just GYM BOX, nowoczesny klub fitness czynny całą dobę, siedem dni w tygodniu.
+Dodatkowe informacje
+Mieszkanie dostępne od 1 listopada 2026 roku. Wymagany minimalny okres najmu wynosi 12 miesięcy. Meble pozostają w mieszkaniu i nie podlegają wynoszeniu. W mieszkaniu dopuszczone są koty, psy nie są akceptowane. Obowiązuje całkowity zakaz palenia. Przed podpisaniem umowy przeprowadzana jest standardowa weryfikacja najemcy, w tym weryfikacja źródła i wysokości dochodów.
+Zapraszamy do kontaktu i umówienia prezentacji mieszkania.
+English
+Studio apartment in a high-rise at Okopowej 45 in Warsaw's Wola district. The 28 m² apartment is located on the 8th floor of an eleven-storey building, is fully furnished, and is ready to move in from 1 November 2026. Its key features include air conditioning, parquet or wooden panel flooring, and excellent transport links to the city centre.
+Apartment
+This 28 m² studio is situated on the 8th floor of a high-rise building. The layout comprises one room with an open-plan kitchenette and a bathroom. The kitchen is windowless, without natural light, and is in the form of an open kitchenette. The bathroom is fitted with a bathtub and a washing machine. The floors are finished with parquet or wooden panels. The apartment was renovated in 2021 and previously served as the owner's personal residence. The front door is reinforced against break-ins. The building has two lifts and an intercom system.
+Furnishings and equipment
+The apartment is fully furnished and equipped. The living area includes a sofa bed, a desk, an office chair, a chest of drawers, shelving units, and a display cabinet. The kitchenette is equipped with an Amica gas cooker with oven, an Amica fridge, and a DeLonghi coffee machine. The bathroom has a Mastercook washing machine. The apartment has air conditioning with a wall-mounted controller. Fast fibre-optic internet (Netia) is available. There is no dishwasher.
+Location
+Okopowej 45 is located in the Wola district, approximately 2.7 km from the centre of Warsaw. It is one of the best-connected addresses in Wola.
+Transport
+Directly near the building, approximately 200 metres away, are the Dzielna and Cmentarz Żydowski tram and bus stops, served by tram lines 1, 22 and 27, and bus lines 180, N41 and N91. The Esperanto stop is also nearby, with bus lines 107, 111, 180, and night buses N41 and N91. The nearest metro stations are Rondo Daszyńskiego (M2 line) and Ratusz Arsenał (M1 line), both reachable by tram or bus within a few minutes.
+Shopping and services
+The immediate area has numerous shops, restaurants, cafés, bakeries, service points, and medical facilities. Within a short walk there are grocery stores, drugstores, pharmacies, banks, a post office, and a LUX MED clinic. The Klif shopping centre is approximately 550 metres away, and Westfield Arkadia is approximately 1.7 km away.
+Dining
+The area around Okopowej offers a wide variety of dining options. Close to the building there are restaurants serving cuisines from around the world as well as cosy cafés.
+Sport and recreation
+At Okopowej 56, in the immediate vicinity, is the Just GYM BOX gym, a modern fitness club open 24 hours a day, seven days a week.
+Additional information
+The apartment is available from 1 November 2026. The minimum rental period is 12 months. The furniture remains in the apartment and may not be removed. Cats are permitted; dogs are not accepted. Smoking is strictly prohibited. Prior to signing the lease, a standard tenant screening process is carried out, including verification of income source and amount.",True,ready_to_use,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,new,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,"[{""priceAmount"": 2300, ""priceCurrency"": ""PLN"", ""pricePerM2"": 82.14, ""observedAt"": ""2026-11-25T00:38:14Z""}]",new,,,2026-11-01,urban,apartment,concrete_plate,plastic,
+68592424,https://www.otodom.pl/pl/oferta/przytulne-mieszkanie-ochota-dobra-komunikacja-ID4DO1q,Przytulne mieszkanie | Ochota | Dobra komunikacja,2800,PLN,52.83,53,2,0,5,1958,,agency,Lares Estates,Warszawa,Ochota,Radomska,mazowieckie,52.216743,20.9785,10,flat,rent,2026-11-02T16:58:24Z,2026-11-16T19:02:44Z,22,1200,2 800 PLN,"52,83 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/lares-estates-ID9354236,9354236,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inc2MHpoYXNsN254bjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.9b9JzePoLts_8BN5bwn9RTAMCGDx_tnanfww943AosM/image,"[""basement"", ""ground floor""]",False,False,False,False,Stara Ochota,mazowieckie,"Radomska, Stara Ochota, Ochota, Warszawa, mazowieckie",1200,2,do zamieszkania,"[""lift"", ""basement"", ""furniture"", ""oven"", ""fridge"", ""washing_machine"", ""tv"", ""dishwasher"", ""stove"", ""entryphone""]","[""internet"", ""cable television""]","[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Inc2MHpoYXNsN254bjEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.9b9JzePoLts_8BN5bwn9RTAMCGDx_tnanfww943AosM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InA4bWpwdWI2a2hrYS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.UqmdC1mqWo7WHUbKb3mNTltK0BI82qb1iC8wKxgNDmE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InM4cnpmenRuNzFiODEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.ECdrt-NOj_Yw66rV_RkxHSONkPSFhWTT9cjJX3DwAKk/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImFvOGJpNHRiaWF4Mi1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.umKv8xIzng0UkQsMpav8gMMlqwnhNlUgdsbOs3o-XHE/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Ijc3bHBjcnMxOHltMS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.433ofZZLauqLHD1K39v3ODh9yY678JNBVuQuxScv4Ho/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImtiMzNjcHkyZWx2ai1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.ElLzTTl7XxJHK5TStTj2yN_ceM0JN32GU6RTQrl3GDQ/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImZ4MnQ4NTJmOGJpdDEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.BBLq1bHvGjt_OCHtHNIv13pIn64E6tgdbWG7dLMtOLg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Im9yZWp3OGZqdWd3MTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.93Xb9FDfr9aH1j0qM5LbNDDzD2-Sis4DKkEqGXy704E/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InQ2dXR0cnR5ZmV4NjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.GvQHfRpsCxS41YMHexd__1VFCqOAw-ySAVOoB0V2qN4/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImF6bXA1bThxYmtuazMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.f50PSonTObfJ9pXV1HoiSCga9Sx2vKSNIJbSKxd4cKA/image""]","MIESZKANIE IDEALNE DLA PARY LUB NA GABINET
+Do wynajęcia wyjątkowe, 2-pokojowe mieszkanie o powierzchni 53 m² , zlokalizowane przy ul. Radomskiej 14 na Starej Ochocie . Lokal znajduje się na parterze kamienicy i wyróżnia się wysokimi sufitami o wysokości ponad 3 metrów, pięknym dębowym parkietem oraz nietypowym układem w kształcie litery T.
+UKŁAD POMIESZCZEŃ
+Mieszkanie składa się z:
+- komfortowej sypialni
+- przestronnego salonu połączonego z kuchnią
+- garderoby typu walk-in
+- łazienki z wanną
+- korytarza
+STANDARD
+Mieszkanie zostało odświeżone, a większość sprzętów AGD jest nowa. Kuchnia wyposażona jest w nową płytę, piekarnik oraz zmywarkę. W mieszkaniu znajduje się wygodne łóżko oraz połączenie prostych, nowoczesnych mebli z elementami vintage, które nadają wnętrzu wyjątkowy charakter.
+Właściciele są elastyczni w kwestii wyposażenia - część mebli może zostać zabrana, niezależnie od długości umowy. Przy najmie na okres dłuższy niż rok istnieje również możliwość dokupienia dodatkowych mebli IKEA.
+LOKALIZACJA
+Mieszkanie znajduje się na Starej Ochocie , w spokojnej i zielonej części Warszawy, która zapewnia jednocześnie bardzo dobrą komunikację z pozostałymi częściami miasta.
+Około 3 minut pieszo znajduje się przystanek autobusowy Hala Kopińska , obsługujący linie 157, 167, 182, 187, 517, 523, N35 i N85.
+Około 5 minut pieszo znajduje się przystanek tramwajowy Wawelska , z liniami 1, 7, 9, 14 i 15.
+Dojazd do centrum Warszawy zajmuje około 10-15 minut.
+NAJWAŻNIEJSZE INFORMACJE
+- wysokie sufity ponad 3 m
+- piękny dębowy parkiet
+- nowa płyta, piekarnik i zmywarka
+- spokojna i zielona okolica
+- możliwość elastycznego ustalenia wyposażenia
+- możliwość wynajmu na działalność gospodarczą po uzgodnieniu szczegółów
+OPŁATY
+Czynsz najmu: 2 800 zł miesięcznie
+Opłaty do wspólnoty: 1 200 zł miesięcznie
+Prąd i gaz: według liczników
+Kaucja zwrotna: 2 800 zł
+Zapraszam do kontaktu i na prezentację mieszkania!",True,ready_to_use,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,new,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,"[{""priceAmount"": 2800, ""priceCurrency"": ""PLN"", ""pricePerM2"": 52.83, ""observedAt"": ""2026-11-25T00:38:14Z""}]",new,,,2026-11-02,urban,tenement,,,30590
+68589246,https://www.otodom.pl/pl/oferta/mokotowska-53-m-balkon-winda-ciche-ID4DNca,Mokotowska | 53 m² | balkon | winda | ciche,4700,PLN,88.68,53,2,6,6,1960,,agency,Eastate Agency,Warszawa,Śródmieście,Mokotowska,mazowieckie,52.221478,21.019249,10,flat,rent,2026-11-02T12:00:40Z,2026-11-15T14:50:25Z,22,1370,4 700 PLN,"88,68 PLN/m²",https://www.otodom.pl/pl/firmy/biura-nieruchomosci/eastate-agency-ID8377466,8377466,https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImQ5NTVia2ZldzV3aDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.HUT418iqurRgaGwhuQ8a205O7NcOj021tmPG4bjsw6U/image,"[""air conditioning"", ""balcony"", ""basement"", ""top floor"", ""secure building""]",False,False,False,False,Śródmieście Południowe,mazowieckie,"Mokotowska, Śródmieście Południowe, Śródmieście, Warszawa, mazowieckie",1370,5000,do zamieszkania,"[""balcony"", ""air_conditioning"", ""lift"", ""basement"", ""furniture"", ""fridge"", ""oven"", ""dishwasher"", ""stove"", ""monitoring"", ""entryphone""]",,"[""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6ImQ5NTVia2ZldzV3aDItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.HUT418iqurRgaGwhuQ8a205O7NcOj021tmPG4bjsw6U/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imdkdjlva2E4cWc2cjMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.TUBXazZrMinD6ZNsf0iRLGDoXbmdHzW3JeP-qV49MKo/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InJiZmxnODc4anBkYS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.z7k2WfHTzYxgGdGgoaz3JzWSJ5ozQCsk4fBUmJ4UPtw/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InlzbWpxcTFsb3hyZjItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.o-8xePEm_PzRKXhqI1KJJwaGRpbtZeYbbJz6q3I-jlg/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6InBpbGFvcXB2dHZ2YTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.Q2R2GsleY3WUquyIePOoEpsQuYfbqKFYPBClZQx3W64/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imx6Zmo5d3VnZXQ1cTMtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.7CC86ZBbo2Mdh8n6FdIHvy3HVov7vNdplDll7uVmkuI/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6Imw1YjFhYW40bXprdTItRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0.t2Y9ksZuJNVuc4rliC4qzf2zjAPyXrjz0pNWi_lWeoI/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjVweGt2azJ4NmxndTEtRUNPU1lTVEVNIiwidyI6W3siZm4iOiJlbnZmcXFlMWF5NGsxLUFQTCIsInMiOiIxNiIsImEiOiIwIiwicCI6IjEwLC0xMCJ9XX0._pQIb6aepb-zrsA30XEoVwQotbAmccDXTfqeJ6GczqM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjZ6dWt4OHhqMXEyeS1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.Xw8mvopl0rKY2s0nk40DOPcR8jSfso9-Q4DvdFLtoUM/image"", ""https://ireland.apollo.olxcdn.com/v1/files/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmbiI6IjBhbWtnbXdqdXh4bC1FQ09TWVNURU0iLCJ3IjpbeyJmbiI6ImVudmZxcWUxYXk0azEtQVBMIiwicyI6IjE2IiwiYSI6IjAiLCJwIjoiMTAsLTEwIn1dfQ.b8jbUtkvuh5cVikseXAEwARmi5XmTjGgF1KGY8usUe8/image""]","Do wynajęcia 2-pokojowe mieszkanie o powierzchni 53 m², położone przy ul. Mokotowskiej, w jednej z najbardziej cenionych części warszawskiego Śródmieścia.
+Mieszkanie
+Lokal znajduje się na 6 piętrze w budynku z windą. Wnętrze jest jasne, urządzone w indywidualnym, eleganckim stylu i wyróżnia się ciekawymi detalami oraz dużą ilością naturalnego światła.
+Mieszkanie składa się z salonu, oddzielnej sypialni, kuchni, łazienki oraz przedpokoju. Dodatkowym atutem jest balkon z widokiem na zieleń i okoliczną zabudowę, który daje możliwość odpoczynku mimo centralnego położenia nieruchomości.
+Mieszkanie wyposażone jest w klimatyzację, co zapewnia komfort szczególnie w miesiącach letnich.
+Łazienka została całkowicie wyremontowana i utrzymana jest w nowoczesnej stylistyce. Wyposażono ją w kabinę prysznicową, czarną armaturę oraz funkcjonalną zabudowę.
+W mieszkaniu znajduje się dużo miejsca do przechowywania, w tym pojemne szafy w zabudowie. Do dyspozycji najemcy pozostają również piwnica oraz komórka lokatorska.
+Budynek
+Mieszkanie znajduje się w zadbanym budynku z windą. Klatka schodowa została odnowiona, a części wspólne są utrzymane w dobrym stanie.
+Położenie mieszkania na 6 piętrze zapewnia dobre doświetlenie wnętrz oraz bardziej otwarty widok niż w przypadku większości mieszkań w tej części Śródmieścia.
+Lokalizacja
+Ul. Mokotowska to jeden z najbardziej charakterystycznych i cenionych adresów warszawskiego Śródmieścia. Lokalizacja łączy centralne położenie z dostępem do zieleni, dobrej gastronomii i miejskiego stylu życia.
+W najbliższym otoczeniu znajdują się liczne restauracje, kawiarnie, piekarnie, butiki, galerie, sklepy oraz punkty usługowe. W zasięgu spaceru znajdują się m.in. Plac Zbawiciela, Plac Konstytucji, Aleja Róż, Park Ujazdowski oraz Łazienki Królewskie.
+Lokalizacja zapewnia również bardzo dobrą komunikację z pozostałymi częściami Warszawy. W pobliżu dostępne są metro, tramwaje oraz liczne linie autobusowe, a wiele kluczowych punktów Śródmieścia znajduje się w zasięgu spaceru.
+Najważniejsze atuty winda
+balkon
+klimatyzacja
+widok na zieleń
+łazienka po całkowitym remoncie
+dużo miejsca do przechowywania
+piwnica
+komórka lokatorska
+świetna lokalizacja przy ul. Mokotowskiej
+Warunki najmu
+Czynsz najmu: 4 700 zł
+Czynsz administracyjny: 1370 zł
+Dodatkowo płatne media według zużycia .
+Mieszkanie dostępne od zaraz .
+Zapraszam do kontaktu i na prezentację nieruchomości.
+ENG
+For rent: a 2-room apartment with an area of 53 m², located on Mokotowska Street, in one of the most sought-after parts of Warsaw’s city centre.
+Apartment
+The apartment is located on the 6th floor of a building with an elevator. The interior is bright, individually designed and elegant, with distinctive details and plenty of natural light.
+The apartment consists of a living room, separate bedroom, kitchen, bathroom and hallway. An additional advantage is the balcony overlooking greenery and the surrounding cityscape, offering a pleasant place to relax despite the central location.
+The apartment is equipped with air conditioning, providing additional comfort, especially during the summer months.
+The bathroom has been completely renovated and finished in a modern style. It features a walk-in shower, black fittings and practical built-in storage.
+There is plenty of storage space throughout the apartment, including spacious built-in wardrobes. The tenant will also have access to a basement storage unit and an additional storage room.
+Building
+The apartment is located in a well-maintained building with an elevator. The staircase has been renovated and the common areas are kept in good condition.
+Its location on the 6th floor provides excellent natural light and a more open view than many other apartments in this part of the city centre.
+Location
+Mokotowska Street is one of the most distinctive and highly regarded addresses in central Warsaw. The location combines a prime city-centre setting with easy access to green areas, excellent dining and urban amenities.
+The immediate neighbourhood offers numerous restaurants, cafés, bakeries, boutiques, galleries, shops and services. Within walking distance are Plac Zbawiciela, Plac Konstytucji, Aleja Róż, Ujazdowski Park and Łazienki Królewskie.
+The location also provides excellent public transport connections to other parts of Warsaw. Metro, tram and bus stops are nearby, while many key destinations in the city centre can easily be reached on foot.
+Key features elevator
+balcony
+air conditioning
+green views
+fully renovated bathroom
+plenty of storage space
+basement storage unit
+additional storage room
+excellent location on Mokotowska Street
+Rental terms
+Rent: PLN 4,700
+Administrative fee: PLN 1370
+Utilities are charged additionally according to consumption .
+The apartment is available immediately .
+Please feel free to contact me to arrange a viewing.
+W Eastate Agency wspieramy klientów w sprzedaży, wynajmie i poszukiwaniach nieruchomości - zarówno na rynku wtórnym, pierwotnym, jak i komercyjnym.
+Pomagamy także w wyborze nieruchomości inwestycyjnych - pod wynajem lub długoterminowe lokowanie kapitału. Zajmujemy się również zarządzaniem najmem, a klientom finansującym zakup kredytem umożliwiamy bezpłatny kontakt z doradcą kredytowym.",True,ready_to_use,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,new,2026-11-25T00:38:14Z,2026-11-25T00:38:14Z,"[{""priceAmount"": 4700, ""priceCurrency"": ""PLN"", ""pricePerM2"": 88.68, ""observedAt"": ""2026-11-25T00:38:14Z""}]",new,,,2026-11-02,urban,tenement,brick,plastic,
